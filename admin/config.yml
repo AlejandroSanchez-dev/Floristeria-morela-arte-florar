@@ -1,0 +1,132 @@
+# ==============================================================================
+# CONFIGURACIÓN DE SVELTIA CMS (Panel Externo para Morela Arte Floral)
+# ==============================================================================
+# Sveltia CMS guarda los cambios directamente en data.json vía GitHub.
+# Sustituye TU_USUARIO_GITHUB/TU_REPOSITORIO por el repositorio real en GitHub.
+backend:
+  name: github
+  repo: TU_USUARIO_GITHUB/TU_REPOSITORIO
+  branch: main
+
+locale: es
+
+# Directorio donde se guardan las imágenes subidas desde el panel
+media_folder: "img/uploads"
+public_folder: "/img/uploads"
+
+# Optimización automática de imágenes en Sveltia CMS a WebP
+media_libraries:
+  default:
+    config:
+      max_file_size: 15728640
+      slugify_filename: true
+      transformations:
+        raster_image:
+          format: webp
+          quality: 82
+          width: 1200
+          height: 1200
+
+collections:
+  - name: "configuracion_web"
+    label: "Gestión de la Web"
+    files:
+      - name: "data"
+        label: "Precios, Textos y Ofertas de Temporada"
+        file: "data.json"
+        format: "json"
+        fields:
+          # ==========================================
+          # 1. OFERTAS DE TEMPORADA (BOTÓN + TEXTOS + PRECIOS)
+          # ==========================================
+          - label: "🌹 Ofertas de Temporada (Activar / Desactivar con un botón)"
+            name: "campana"
+            widget: "object"
+            collapsed: false
+            fields:
+              - label: "Mostrar Ofertas de Temporada en la web"
+                name: "activa"
+                widget: "boolean"
+                default: true
+                hint: "Activa este botón para abrir las ofertas de temporada en la portada. Apágalo cuando termine la campaña."
+              - label: "Temporada / Estilo de Color"
+                name: "tema"
+                widget: "select"
+                default: "san_valentin"
+                options:
+                  - { label: "San Valentín (Tonos Burdeos y Rosa)", value: "san_valentin" }
+                  - { label: "Día de la Madre (Tonos Lavanda y Rosa)", value: "dia_madre" }
+                  - { label: "Comuniones (Tonos Ámbar y Dorado)", value: "comuniones" }
+                  - { label: "Navidad (Tonos Verde Bosque y Oro)", value: "navidad" }
+              - { label: "Etiqueta Superior", name: "etiqueta", widget: "string" }
+              - { label: "Título de la Campaña", name: "titulo", widget: "string" }
+              - { label: "Texto / Subtítulo", name: "subtitulo", widget: "text" }
+              - { label: "Aviso de Fecha Límite", name: "fecha_limite", widget: "string", required: false }
+              - label: "Ofertas de Temporada (Precios y Textos)"
+                name: "ofertas"
+                widget: "list"
+                summary: "{{fields.nombre}} — {{fields.precio}}"
+                fields:
+                  - { label: "Nombre de la Oferta", name: "nombre", widget: "string" }
+                  - { label: "Descripción", name: "descripcion", widget: "text" }
+                  - { label: "Precio Oferta (ej: 49 €)", name: "precio", widget: "string" }
+                  - { label: "Precio Anterior Tachado (opcional)", name: "precio_antes", widget: "string", required: false }
+                  - { label: "Etiqueta Destacada (ej: El más vendido)", name: "tag", widget: "string", required: false }
+                  - { label: "Fotografía", name: "imagen", widget: "image" }
+
+          # ==========================================
+          # 2. PRECIOS Y TEXTOS DE LA CALCULADORA NUPCIAL
+          # ==========================================
+          - label: "🧮 Precios y Textos de la Calculadora Nupcial"
+            name: "pack_items"
+            widget: "list"
+            collapsed: true
+            allow_add: false
+            summary: "{{fields.nombre}} ({{fields.precio}} €)"
+            fields:
+              - { label: "ID (NO TOCAR)", name: "id", widget: "hidden" }
+              - { label: "Nombre de la Pieza", name: "nombre", widget: "string" }
+              - { label: "Descripción Breve", name: "descripcion", widget: "string" }
+              - { label: "Precio (€)", name: "precio", widget: "number", value_type: "int" }
+              - { label: "Icono (NO TOCAR)", name: "svg", widget: "hidden" }
+              - { label: "Cantidad Inicial (NO TOCAR)", name: "cantidad_inicial", widget: "hidden" }
+              - { label: "Color Activo (NO TOCAR)", name: "bg_active", widget: "hidden" }
+              - { label: "Color Icono (NO TOCAR)", name: "icon_bg", widget: "hidden" }
+
+          # ==========================================
+          # 3. PRECIOS Y TEXTOS DEL CATÁLOGO PRINCIPAL
+          # ==========================================
+          - label: "📸 Catálogo y Galería (Precios, Textos y Fotos)"
+            name: "galeria"
+            widget: "list"
+            collapsed: true
+            summary: "{{fields.titulo}} — {{fields.precio}}"
+            fields:
+              - { label: "Título de la Pieza", name: "titulo", widget: "string" }
+              - label: "Categoría"
+                name: "categoria"
+                widget: "select"
+                options:
+                  - { label: "Ramos de Novia", value: "novias" }
+                  - { label: "Cúpulas y Réplicas", value: "cupulas" }
+                  - { label: "Tocados y Comunión", value: "tocados" }
+                  - { label: "Prendidos, Damas y Coche", value: "detalles" }
+              - { label: "Etiqueta Superior", name: "etiqueta", widget: "string", default: "Trabajo Real Morela" }
+              - { label: "Color de Etiqueta (NO TOCAR)", name: "badgeColor", widget: "hidden", default: "bg-atelier-berry text-white" }
+              - { label: "Precio Visible (ej: Desde 95 €)", name: "precio", widget: "string" }
+              - { label: "Descripción", name: "descripcion", widget: "text" }
+              - { label: "Fotografía", name: "imagen", widget: "image" }
+
+          # ==========================================
+          # 4. TEXTOS DE CONTACTO Y HORARIOS
+          # ==========================================
+          - label: "📍 Contacto y Horarios"
+            name: "contacto"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Teléfono visible", name: "telefono", widget: "string" }
+              - { label: "WhatsApp (34 delante, sin + ni espacios)", name: "whatsapp", widget: "string" }
+              - { label: "Dirección del Taller", name: "direccion", widget: "string" }
+              - { label: "Horario Lunes a Jueves", name: "horario_lv", widget: "string" }
+              - { label: "Horario Viernes / Verano", name: "horario_sab", widget: "string" }
