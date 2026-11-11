@@ -5,7 +5,7 @@
 # Sustituye TU_USUARIO_GITHUB/TU_REPOSITORIO por el repositorio real en GitHub.
 backend:
   name: github
-  repo: TU_USUARIO_GITHUB/TU_REPOSITORIO
+  repo: AlejandroSanchez-dev/Floristeria-morela-arte-florar
   branch: main
 
 locale: es
