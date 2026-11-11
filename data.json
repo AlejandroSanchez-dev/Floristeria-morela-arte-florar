@@ -1,7 +1,7 @@
 {
   "campana": {
-    "activa": false,
-    "tema": "san_valentin",
+    "activa": true,
+    "tema": "comuniones",
     "etiqueta": "Edición Limitada · Encargos Abiertos",
     "titulo": "Especial San Valentín: Flores que no se marchitan",
     "subtitulo": "Sorprende con rosas eternas y composiciones preservadas hechas a mano en nuestro taller de Albacete. Recogida en tienda o envío a domicilio.",
@@ -13,7 +13,7 @@
         "precio": "49 €",
         "precio_antes": "58 €",
         "tag": "El más vendido",
-        "imagen": "https://images.unsplash.com/photo-1508615039623-a25605d2b022?auto=format&fit=crop&w=900&q=80"
+        "imagen": "/img/uploads/aa4a0433_1_232554-170566166715693.webp"
       },
       {
         "nombre": "Ramo 'Suspiro' de Rosas y Eucalipto",
@@ -21,7 +21,7 @@
         "precio": "39 €",
         "precio_antes": "45 €",
         "tag": "Unidades limitadas",
-        "imagen": "https://images.unsplash.com/photo-1526047932273-341f2a7631f9?auto=format&fit=crop&w=900&q=80"
+        "imagen": "/img/uploads/pantone-ash-rose-17-1514-2_1_232554-172008942288661.webp"
       },
       {
         "nombre": "Caja Sombrerera Mini Atelier",
