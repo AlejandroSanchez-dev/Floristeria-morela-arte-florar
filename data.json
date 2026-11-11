@@ -1,13 +1,6 @@
 {
-  "contacto": {
-    "telefono": "643 92 25 47",
-    "whatsapp": "34643922547",
-    "direccion": "Calle Blasco de Garay, 12",
-    "horario_lv": "L–J: 10:00–13:30 y 17:30–19:30",
-    "horario_sab": "Viernes: 10:00–14:00 · (Verano L–V: 9–14h)"
-  },
   "campana": {
-    "activa": true,
+    "activa": false,
     "tema": "san_valentin",
     "etiqueta": "Edición Limitada · Encargos Abiertos",
     "titulo": "Especial San Valentín: Flores que no se marchitan",
@@ -184,5 +177,12 @@
       "descripcion": "Corsages con lazo de seda para damas de honor y prendidos florales para las manetas y bandeja trasera del coche nupcial.",
       "imagen": "https://images.unsplash.com/photo-1469371670807-013ccf25f16a?auto=format&fit=crop&w=900&q=80"
     }
-  ]
+  ],
+  "contacto": {
+    "telefono": "643 92 25 47",
+    "whatsapp": "34643922547",
+    "direccion": "Calle Blasco de Garay, 12",
+    "horario_lv": "L–J: 10:00–13:30 y 17:30–19:30",
+    "horario_sab": "Viernes: 10:00–14:00 · (Verano L–V: 9–14h)"
+  }
 }
