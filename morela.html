@@ -153,8 +153,8 @@
       opacity: 1;
       transform: translateY(0);
     }
-    .no-scrollbar::-webkit-scrollbar { display: none; }
-    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    .no-scrollbar::-webkit-scrollbar, .scrollbar-none::-webkit-scrollbar { display: none; }
+    .no-scrollbar, .scrollbar-none { -ms-overflow-style: none; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
 
     /* Estilos de tarjetas seleccionadas en el configurador */
     .pack-card.is-selected {
@@ -418,8 +418,8 @@
           </div>
         </div>
 
-        <!-- Grid de Ofertas de la Campaña -->
-        <div id="campana-ofertas-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+        <!-- Grid de Ofertas de la Campaña (Carrusel swipe en móvil, grid en escritorio) -->
+        <div id="campana-ofertas-grid" class="flex overflow-x-auto snap-x snap-mandatory gap-4 pb-4 -mx-4 px-4 sm:grid sm:grid-cols-2 lg:grid-cols-3 sm:gap-8 sm:overflow-visible sm:mx-0 sm:px-0 no-scrollbar">
           <!-- Renderizado dinámicamente -->
         </div>
 
@@ -488,8 +488,8 @@
           </div>
         </div>
 
-        <!-- Grid del Catálogo / Galería (Renderizado dinámicamente con 9 piezas reales de Morela) -->
-        <div id="lookbook-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-7"></div>
+        <!-- Grid del Catálogo / Galería (2 columnas compactas y elegantes en móvil, 3 en escritorio) -->
+        <div id="lookbook-grid" class="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-7"></div>
 
         <!-- Banner inferior de preservación y personalización -->
         <div class="mt-10 sm:mt-12 bg-gradient-to-r from-atelier-blush via-atelier-amber to-atelier-sage rounded-3xl p-6 sm:p-8 border border-atelier-blushMid/80 shadow-sm flex flex-col md:flex-row items-center justify-between gap-6 reveal">
@@ -546,7 +546,7 @@
                   <span class="text-xs font-bold uppercase tracking-wider text-ink">1. Elige tus piezas y unidades</span>
                   <span class="text-[11px] font-medium text-atelier-berry">Precios base reales de taller</span>
                 </div>
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5" id="pack-items-container"></div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 sm:gap-3.5" id="pack-items-container"></div>
               </div>
 
               <!-- PASO 2: Selección de Paleta de Color Floral -->
@@ -699,10 +699,10 @@
           </p>
         </div>
 
-        <!-- 4 Pasos con color -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6 mb-14 reveal">
+        <!-- 4 Pasos con color (Carrusel deslizable en móvil, cuadrícula en escritorio) -->
+        <div class="flex overflow-x-auto snap-x snap-mandatory gap-4 pb-4 -mx-4 px-4 sm:grid sm:grid-cols-2 lg:grid-cols-4 sm:gap-6 sm:overflow-visible sm:mx-0 sm:px-0 mb-14 reveal no-scrollbar">
           <!-- Paso 1 -->
-          <div class="bg-atelier-blush/60 rounded-3xl p-6 border border-atelier-blushMid relative flex flex-col justify-between">
+          <div class="bg-atelier-blush/60 rounded-3xl p-6 border border-atelier-blushMid relative flex flex-col justify-between w-[80vw] max-w-[290px] sm:w-auto shrink-0 snap-center sm:snap-align-none">
             <div>
               <div class="flex items-center justify-between mb-4">
                 <span class="font-serif text-4xl font-bold text-atelier-berry">01</span>
@@ -719,7 +719,7 @@
           </div>
 
           <!-- Paso 2 -->
-          <div class="bg-atelier-amber/70 rounded-3xl p-6 border border-atelier-amberMid relative flex flex-col justify-between">
+          <div class="bg-atelier-amber/70 rounded-3xl p-6 border border-atelier-amberMid relative flex flex-col justify-between w-[80vw] max-w-[290px] sm:w-auto shrink-0 snap-center sm:snap-align-none">
             <div>
               <div class="flex items-center justify-between mb-4">
                 <span class="font-serif text-4xl font-bold text-atelier-gold">02</span>
@@ -736,7 +736,7 @@
           </div>
 
           <!-- Paso 3 -->
-          <div class="bg-atelier-lavender/70 rounded-3xl p-6 border border-atelier-lavenderMid relative flex flex-col justify-between">
+          <div class="bg-atelier-lavender/70 rounded-3xl p-6 border border-atelier-lavenderMid relative flex flex-col justify-between w-[80vw] max-w-[290px] sm:w-auto shrink-0 snap-center sm:snap-align-none">
             <div>
               <div class="flex items-center justify-between mb-4">
                 <span class="font-serif text-4xl font-bold text-atelier-plum">03</span>
@@ -753,7 +753,7 @@
           </div>
 
           <!-- Paso 4 -->
-          <div class="bg-atelier-sage/70 rounded-3xl p-6 border border-atelier-sageMid relative flex flex-col justify-between">
+          <div class="bg-atelier-sage/70 rounded-3xl p-6 border border-atelier-sageMid relative flex flex-col justify-between w-[80vw] max-w-[290px] sm:w-auto shrink-0 snap-center sm:snap-align-none">
             <div>
               <div class="flex items-center justify-between mb-4">
                 <span class="font-serif text-4xl font-bold text-atelier-forest">04</span>
@@ -797,11 +797,11 @@
           </a>
         </div>
 
-        <!-- Tarjetas de Testimonios Reales de Bodas.net -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 reveal">
+        <!-- Tarjetas de Testimonios Reales de Bodas.net (Carrusel deslizable en móvil, 3 columnas en escritorio) -->
+        <div class="flex overflow-x-auto snap-x snap-mandatory gap-4 pb-4 -mx-4 px-4 md:grid md:grid-cols-3 md:gap-6 md:overflow-visible md:mx-0 md:px-0 reveal no-scrollbar">
           
           <!-- Reseña Real 1: Salomé -->
-          <article class="bg-white rounded-3xl p-6 sm:p-8 border border-atelier-blushMid shadow-sm flex flex-col justify-between">
+          <article class="bg-white rounded-3xl p-6 sm:p-8 border border-atelier-blushMid shadow-sm flex flex-col justify-between w-[84vw] max-w-[340px] md:w-auto shrink-0 snap-center md:snap-align-none">
             <div class="space-y-4">
               <div class="flex items-center justify-between">
                 <div class="flex text-amber-500">
@@ -826,7 +826,7 @@
           </article>
 
           <!-- Reseña Real 2 -->
-          <article class="bg-white rounded-3xl p-6 sm:p-8 border border-atelier-sageMid shadow-sm flex flex-col justify-between">
+          <article class="bg-white rounded-3xl p-6 sm:p-8 border border-atelier-sageMid shadow-sm flex flex-col justify-between w-[84vw] max-w-[340px] md:w-auto shrink-0 snap-center md:snap-align-none">
             <div class="space-y-4">
               <div class="flex items-center justify-between">
                 <div class="flex text-amber-500">
@@ -851,7 +851,7 @@
           </article>
 
           <!-- Reseña Real 3 -->
-          <article class="bg-white rounded-3xl p-6 sm:p-8 border border-atelier-lavenderMid shadow-sm flex flex-col justify-between">
+          <article class="bg-white rounded-3xl p-6 sm:p-8 border border-atelier-lavenderMid shadow-sm flex flex-col justify-between w-[84vw] max-w-[340px] md:w-auto shrink-0 snap-center md:snap-align-none">
             <div class="space-y-4">
               <div class="flex items-center justify-between">
                 <div class="flex text-amber-500">
@@ -897,11 +897,12 @@
           </p>
         </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6 reveal">
+        <!-- Canales y Redes (Carrusel horizontal deslizable en móvil, 4 columnas en escritorio) -->
+        <div class="flex overflow-x-auto snap-x snap-mandatory gap-4 pb-4 -mx-4 px-4 sm:grid sm:grid-cols-2 lg:grid-cols-4 sm:gap-6 sm:overflow-visible sm:mx-0 sm:px-0 reveal no-scrollbar">
           
           <!-- INSTAGRAM CARD -->
           <a href="https://www.instagram.com/morelaartefloral/?hl=es" target="_blank" rel="noopener noreferrer"
-             class="group rounded-3xl overflow-hidden bg-white border border-atelier-blushMid shadow-sm hover:shadow-editorial hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between">
+             class="group rounded-3xl overflow-hidden bg-white border border-atelier-blushMid shadow-sm hover:shadow-editorial hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between w-[80vw] max-w-[290px] sm:w-auto shrink-0 snap-center sm:snap-align-none">
             <div>
               <div class="h-28 bg-gradient-to-tr from-[#8E3746] via-[#C86472] to-[#F5D6AC] p-5 flex items-start justify-between text-white relative overflow-hidden">
                 <div class="w-12 h-12 rounded-2xl bg-white/20 backdrop-blur-md flex items-center justify-center border border-white/30">
@@ -929,7 +930,7 @@
 
           <!-- TIKTOK CARD -->
           <a href="https://www.tiktok.com/@morelapreservados" target="_blank" rel="noopener noreferrer"
-             class="group rounded-3xl overflow-hidden bg-white border border-atelier-lavenderMid shadow-sm hover:shadow-editorial hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between">
+             class="group rounded-3xl overflow-hidden bg-white border border-atelier-lavenderMid shadow-sm hover:shadow-editorial hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between w-[80vw] max-w-[290px] sm:w-auto shrink-0 snap-center sm:snap-align-none">
             <div>
               <div class="h-28 bg-gradient-to-tr from-[#231B1D] via-[#6E5399] to-[#C86472] p-5 flex items-start justify-between text-white relative overflow-hidden">
                 <div class="w-12 h-12 rounded-2xl bg-white/20 backdrop-blur-md flex items-center justify-center border border-white/30">
@@ -957,7 +958,7 @@
 
           <!-- BODAS.NET CARD -->
           <a href="https://www.bodas.net/floristerias/morela-arte-floral--e232554" target="_blank" rel="noopener noreferrer"
-             class="group rounded-3xl overflow-hidden bg-white border border-atelier-sageMid shadow-sm hover:shadow-editorial hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between">
+             class="group rounded-3xl overflow-hidden bg-white border border-atelier-sageMid shadow-sm hover:shadow-editorial hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between w-[80vw] max-w-[290px] sm:w-auto shrink-0 snap-center sm:snap-align-none">
             <div>
               <div class="h-28 bg-gradient-to-tr from-[#234937] via-[#3D735B] to-[#B87B31] p-5 flex items-start justify-between text-white relative overflow-hidden">
                 <div class="w-12 h-12 rounded-2xl bg-white/20 backdrop-blur-md flex items-center justify-center border border-white/30">
@@ -990,7 +991,7 @@
 
           <!-- FACEBOOK CARD -->
           <a href="https://www.facebook.com/p/Morela-Arte-Floral-100091839678770/" target="_blank" rel="noopener noreferrer"
-             class="group rounded-3xl overflow-hidden bg-white border border-atelier-amberMid shadow-sm hover:shadow-editorial hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between">
+             class="group rounded-3xl overflow-hidden bg-white border border-atelier-amberMid shadow-sm hover:shadow-editorial hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between w-[80vw] max-w-[290px] sm:w-auto shrink-0 snap-center sm:snap-align-none">
             <div>
               <div class="h-28 bg-gradient-to-tr from-[#8C5820] via-[#B87B31] to-[#E5B87B] p-5 flex items-start justify-between text-white relative overflow-hidden">
                 <div class="w-12 h-12 rounded-2xl bg-white/20 backdrop-blur-md flex items-center justify-center border border-white/30">
@@ -1586,8 +1587,8 @@
       const grid = document.getElementById('campana-ofertas-grid');
       if (grid && campana.ofertas) {
         grid.innerHTML = campana.ofertas.map(oferta => `
-          <article class="bg-white rounded-3xl overflow-hidden border ${theme.cardBorder} shadow-sm hover:shadow-editorial transition-all duration-300 flex flex-col justify-between group">
-            <div class="relative h-64 sm:h-72 overflow-hidden bg-atelier-sand">
+          <article class="bg-white rounded-3xl overflow-hidden border ${theme.cardBorder} shadow-sm hover:shadow-editorial transition-all duration-300 flex flex-col justify-between group w-[82vw] max-w-[320px] sm:w-auto shrink-0 snap-center sm:snap-align-none">
+            <div class="relative h-56 sm:h-72 overflow-hidden bg-atelier-sand">
               <img 
                 src="${oferta.imagen}" 
                 alt="${oferta.nombre}" 
@@ -1606,9 +1607,9 @@
               </div>
             </div>
 
-            <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+            <div class="p-5 sm:p-6 flex-1 flex flex-col justify-between space-y-4">
               <div>
-                <h3 class="font-serif text-2xl font-bold text-ink leading-snug group-hover:text-atelier-berry transition-colors">
+                <h3 class="font-serif text-xl sm:text-2xl font-bold text-ink leading-snug group-hover:text-atelier-berry transition-colors">
                   ${oferta.nombre}
                 </h3>
                 <p class="text-xs sm:text-sm text-ink-muted mt-2 line-clamp-3 leading-relaxed">
@@ -1621,7 +1622,7 @@
                   <span class="text-[10px] uppercase tracking-wider text-ink-soft">Precio Taller</span>
                   <div class="flex items-baseline gap-1.5">
                     ${oferta.precio_antes ? `<span class="text-xs line-through text-ink-muted">${oferta.precio_antes}</span>` : ''}
-                    <span class="text-lg font-bold text-atelier-berry">${oferta.precio}</span>
+                    <span class="text-base sm:text-lg font-bold text-atelier-berry">${oferta.precio}</span>
                   </div>
                 </div>
                 <a href="https://wa.me/${SITE_DATA.contacto.whatsapp}?text=${encodeURIComponent('Hola Morela Arte Floral, me interesa encargar la pieza de campaña "' + oferta.nombre + '" (' + oferta.precio + '). ¿Tenéis disponibilidad?')}"
@@ -1710,8 +1711,8 @@
       function renderGallery(filter = 'all') {
         const filtered = SITE_DATA.galeria.filter(item => filter === 'all' || item.categoria === filter);
         lookbookGrid.innerHTML = filtered.map((item, idx) => `
-          <article data-idx="${idx}" data-category="${item.categoria}" class="gallery-card animate-fade-in group cursor-pointer bg-white rounded-3xl overflow-hidden border border-atelier-blushMid/80 shadow-sm hover:shadow-editorial transition-all duration-500 flex flex-col justify-between">
-            <div class="relative h-64 sm:h-72 overflow-hidden bg-atelier-sand">
+          <article data-idx="${idx}" data-category="${item.categoria}" class="gallery-card animate-fade-in group cursor-pointer bg-white rounded-2xl sm:rounded-3xl overflow-hidden border border-atelier-blushMid/80 shadow-sm hover:shadow-editorial transition-all duration-500 flex flex-col justify-between">
+            <div class="relative h-40 sm:h-72 overflow-hidden bg-atelier-sand">
               <img 
                 src="${item.imagen}" 
                 alt="${item.titulo}" 
@@ -1719,25 +1720,25 @@
                 onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1526047932273-341f2a7631f9?auto=format&fit=crop&w=900&q=80';"
                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
               />
-              <span class="absolute top-3.5 left-3.5 ${item.badgeColor} text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full shadow-sm">
+              <span class="absolute top-2.5 left-2.5 sm:top-3.5 sm:left-3.5 ${item.badgeColor} text-[9px] sm:text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 sm:px-3 sm:py-1 rounded-full shadow-sm">
                 ${item.etiqueta}
               </span>
-              <span class="absolute top-3.5 right-3.5 bg-white/95 backdrop-blur-md text-ink text-xs font-bold px-3 py-1 rounded-full shadow-sm">
+              <span class="absolute top-2.5 right-2.5 sm:top-3.5 sm:right-3.5 bg-white/95 backdrop-blur-md text-ink text-[11px] sm:text-xs font-bold px-2 py-0.5 sm:px-3 sm:py-1 rounded-full shadow-sm">
                 ${item.precio}
               </span>
             </div>
-            <div class="p-5 sm:p-6 flex-1 flex flex-col justify-between space-y-4">
+            <div class="p-3 sm:p-6 flex-1 flex flex-col justify-between space-y-2 sm:space-y-4">
               <div>
-                <h3 class="font-serif text-2xl font-bold text-ink group-hover:text-atelier-berry transition-colors leading-snug">
+                <h3 class="font-serif text-sm sm:text-2xl font-bold text-ink group-hover:text-atelier-berry transition-colors leading-snug line-clamp-2">
                   ${item.titulo}
                 </h3>
-                <p class="text-xs sm:text-sm text-ink-muted mt-1.5 line-clamp-2 leading-relaxed">
+                <p class="hidden sm:block text-xs sm:text-sm text-ink-muted mt-1.5 line-clamp-2 leading-relaxed">
                   ${item.descripcion}
                 </p>
               </div>
-              <div class="pt-2 border-t border-atelier-sand flex items-center justify-between text-xs font-bold text-atelier-berry">
-                <span>Ver ficha y detalles</span>
-                <span class="w-7 h-7 rounded-full bg-atelier-blush group-hover:bg-atelier-berry group-hover:text-white flex items-center justify-center transition-colors">＋</span>
+              <div class="pt-2 border-t border-atelier-sand flex items-center justify-between text-[11px] sm:text-xs font-bold text-atelier-berry">
+                <span class="truncate">Ver detalles</span>
+                <span class="w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-atelier-blush group-hover:bg-atelier-berry group-hover:text-white flex items-center justify-center transition-colors shrink-0 text-xs">＋</span>
               </div>
             </div>
           </article>
@@ -1807,21 +1808,26 @@
             : `bg-white text-ink-muted border border-atelier-sand`;
 
           return `
-            <div class="${cardClasses} rounded-2xl p-4 transition-all duration-200 flex flex-col justify-between gap-3">
-              <div class="flex items-start gap-3">
-                <div class="w-11 h-11 rounded-xl ${iconClasses} flex items-center justify-center shrink-0 transition-colors">
+            <div class="${cardClasses} rounded-2xl p-3 sm:p-4 transition-all duration-200 flex flex-col justify-between gap-2.5 sm:gap-3">
+              <div class="flex items-center sm:items-start gap-2.5 sm:gap-3">
+                <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-xl ${iconClasses} flex items-center justify-center shrink-0 transition-colors">
                   ${BOTANICAL_SVGS[item.svg] || BOTANICAL_SVGS.bouquet}
                 </div>
                 <div class="flex-1 min-w-0">
-                  <div class="flex items-center justify-between gap-1">
-                    <h4 class="font-bold text-xs sm:text-sm text-ink truncate">${item.nombre}</h4>
-                  </div>
-                  <p class="text-[11px] text-ink-muted leading-snug mt-0.5">${item.descripcion}</p>
-                  <span class="inline-block mt-1.5 text-xs font-bold text-atelier-berry">${item.precio} € / ud.</span>
+                  <h4 class="font-bold text-xs sm:text-sm text-ink truncate">${item.nombre}</h4>
+                  <p class="hidden sm:block text-[11px] text-ink-muted leading-snug mt-0.5">${item.descripcion}</p>
+                  <span class="inline-block mt-0.5 sm:mt-1.5 text-xs font-bold text-atelier-berry">${item.precio} € / ud.</span>
+                </div>
+                <!-- Contador +/- ergonómico en móvil en la misma fila -->
+                <div class="flex sm:hidden items-center gap-1.5 bg-white rounded-full px-1.5 py-1 border border-atelier-sand shadow-sm shrink-0">
+                  <button type="button" data-action="dec" data-id="${item.id}" aria-label="Restar unidad" class="w-6 h-6 rounded-full hover:bg-atelier-blush text-ink font-bold text-sm flex items-center justify-center transition">−</button>
+                  <span class="w-4 text-center text-xs font-bold text-ink">${qty}</span>
+                  <button type="button" data-action="inc" data-id="${item.id}" aria-label="Sumar unidad" class="w-6 h-6 rounded-full bg-ink hover:bg-atelier-berry text-white font-bold text-sm flex items-center justify-center transition">+</button>
                 </div>
               </div>
 
-              <div class="flex items-center justify-between pt-2 border-t border-ink/5">
+              <!-- En escritorio/tablet mostramos la barra inferior completa con subtotal -->
+              <div class="hidden sm:flex items-center justify-between pt-2 border-t border-ink/5">
                 <span class="text-[11px] font-semibold ${isSelected ? 'text-ink' : 'text-ink-soft'}">
                   ${isSelected ? `Subtotal: ${qty * item.precio} €` : 'Sin añadir'}
                 </span>

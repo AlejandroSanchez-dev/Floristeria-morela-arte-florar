@@ -1,7 +1,14 @@
 {
+  "contacto": {
+    "telefono": "643 92 25 47",
+    "whatsapp": "34643922547",
+    "direccion": "Calle Blasco de Garay, 12",
+    "horario_lv": "L–J: 10:00–13:30 y 17:30–19:30",
+    "horario_sab": "Viernes: 10:00–14:00 · (Verano L–V: 9–14h)"
+  },
   "campana": {
     "activa": true,
-    "tema": "dia_madre",
+    "tema": "san_valentin",
     "etiqueta": "Edición Limitada · Encargos Abiertos",
     "titulo": "Especial San Valentín: Flores que no se marchitan",
     "subtitulo": "Sorprende con rosas eternas y composiciones preservadas hechas a mano en nuestro taller de Albacete. Recogida en tienda o envío a domicilio.",
@@ -13,7 +20,7 @@
         "precio": "49 €",
         "precio_antes": "58 €",
         "tag": "El más vendido",
-        "imagen": "/img/uploads/aa4a0433_1_232554-170566166715693.webp"
+        "imagen": "https://images.unsplash.com/photo-1508615039623-a25605d2b022?auto=format&fit=crop&w=900&q=80"
       },
       {
         "nombre": "Ramo 'Suspiro' de Rosas y Eucalipto",
@@ -21,7 +28,7 @@
         "precio": "39 €",
         "precio_antes": "45 €",
         "tag": "Unidades limitadas",
-        "imagen": "/img/uploads/pantone-ash-rose-17-1514-2_1_232554-172008942288661.webp"
+        "imagen": "https://images.unsplash.com/photo-1526047932273-341f2a7631f9?auto=format&fit=crop&w=900&q=80"
       },
       {
         "nombre": "Caja Sombrerera Mini Atelier",
@@ -177,12 +184,5 @@
       "descripcion": "Corsages con lazo de seda para damas de honor y prendidos florales para las manetas y bandeja trasera del coche nupcial.",
       "imagen": "https://images.unsplash.com/photo-1469371670807-013ccf25f16a?auto=format&fit=crop&w=900&q=80"
     }
-  ],
-  "contacto": {
-    "telefono": "643 92 25 47",
-    "whatsapp": "34643922547",
-    "direccion": "Calle Blasco de Garay, 12",
-    "horario_lv": "L–J: 10:00–13:30 y 17:30–19:30",
-    "horario_sab": "Viernes: 10:00–14:00 · (Verano L–V: 9–14h)"
-  }
+  ]
 }

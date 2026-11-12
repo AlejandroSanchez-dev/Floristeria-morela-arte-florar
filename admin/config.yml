@@ -2,13 +2,10 @@
 # CONFIGURACIÓN DE SVELTIA CMS (Panel Externo para Morela Arte Floral)
 # ==============================================================================
 # Sveltia CMS guarda los cambios directamente en data.json vía GitHub.
-# Sustituye TU_USUARIO_GITHUB/TU_REPOSITORIO por el repositorio real en GitHub.
 backend:
   name: github
   repo: AlejandroSanchez-dev/Floristeria-morela-arte-florar
   branch: main
-
-locale: es
 
 # Directorio donde se guardan las imágenes subidas desde el panel
 media_folder: "img/uploads"
