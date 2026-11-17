@@ -1,11 +1,4 @@
 {
-  "contacto": {
-    "telefono": "643 92 25 47",
-    "whatsapp": "34643922547",
-    "direccion": "Calle Blasco de Garay, 12",
-    "horario_lv": "L–J: 10:00–13:30 y 17:30–19:30",
-    "horario_sab": "Viernes: 10:00–14:00 · (Verano L–V: 9–14h)"
-  },
   "campana": {
     "activa": true,
     "tema": "san_valentin",
@@ -20,7 +13,7 @@
         "precio": "49 €",
         "precio_antes": "58 €",
         "tag": "El más vendido",
-        "imagen": "https://images.unsplash.com/photo-1508615039623-a25605d2b022?auto=format&fit=crop&w=900&q=80"
+        "imagen": "/img/uploads/images-2.webp"
       },
       {
         "nombre": "Ramo 'Suspiro' de Rosas y Eucalipto",
@@ -137,7 +130,7 @@
       "badgeColor": "bg-atelier-gold text-white",
       "precio": "Desde 45 €",
       "descripcion": "Cúpula de cristal con base de madera natural, rosa eterna principal y composición botánica a los pies. El regalo estrella para madres y abuelas.",
-      "imagen": "https://images.unsplash.com/photo-1508615039623-a25605d2b022?auto=format&fit=crop&w=900&q=80"
+      "imagen": "/img/uploads/cris_1_232554-172552754059480.webp"
     },
     {
       "titulo": "Pareja de Réplicas en Miniatura para Madres",
@@ -184,5 +177,12 @@
       "descripcion": "Corsages con lazo de seda para damas de honor y prendidos florales para las manetas y bandeja trasera del coche nupcial.",
       "imagen": "https://images.unsplash.com/photo-1469371670807-013ccf25f16a?auto=format&fit=crop&w=900&q=80"
     }
-  ]
+  ],
+  "contacto": {
+    "telefono": "643 92 25 47",
+    "whatsapp": "34643922547",
+    "direccion": "Calle Blasco de Garay, 12",
+    "horario_lv": "L–J: 10:00–13:30 y 17:30–19:30",
+    "horario_sab": "Viernes: 10:00–14:00 · (Verano L–V: 9–14h)"
+  }
 }
