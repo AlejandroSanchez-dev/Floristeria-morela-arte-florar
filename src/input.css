@@ -1,0 +1,127 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Fuentes autoalojadas (licencia SIL OFL) */
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('/assets/fonts/cormorant-garamond-latin-500-normal.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('/assets/fonts/cormorant-garamond-latin-600-normal.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/assets/fonts/cormorant-garamond-latin-700-normal.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/assets/fonts/cormorant-garamond-latin-400-italic.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: italic;
+  font-weight: 600;
+  font-display: swap;
+  src: url('/assets/fonts/cormorant-garamond-latin-600-italic.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/assets/fonts/plus-jakarta-sans-latin-400-normal.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('/assets/fonts/plus-jakarta-sans-latin-500-normal.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('/assets/fonts/plus-jakarta-sans-latin-600-normal.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/assets/fonts/plus-jakarta-sans-latin-700-normal.woff2') format('woff2');
+}
+
+@layer base {
+  body {
+    background-color: #FCF9F6;
+    color: #231B1D;
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+    overflow-x: hidden;
+  }
+  h1, h2, h3, h4, .font-editorial { font-family: 'Cormorant Garamond', Georgia, serif; }
+  :focus-visible { outline: 3px solid #8E3746; outline-offset: 3px; }
+}
+
+@layer components {
+  .skip-link {
+    position: absolute; left: 1rem; top: -4rem; z-index: 100;
+    background: #231B1D; color: #fff; padding: .75rem 1.25rem; border-radius: 9999px; font-weight: 600;
+  }
+  .skip-link:focus { top: 1rem; }
+
+  /* Páginas legales */
+  .legal-content h2 { font-size: 1.6rem; font-weight: 700; margin-top: 2rem; margin-bottom: .5rem; color: #231B1D; }
+  .legal-content h3 { font-size: 1.25rem; font-weight: 700; margin-top: 1.25rem; margin-bottom: .25rem; color: #231B1D; }
+  .legal-content p, .legal-content li { color: #5C5053; line-height: 1.7; margin-bottom: .6rem; }
+  .legal-content ul { list-style: disc; padding-left: 1.25rem; margin-bottom: 1rem; }
+  .legal-content ol { list-style: decimal; padding-left: 1.25rem; margin-bottom: 1rem; }
+  .legal-content a { color: #8E3746; text-decoration: underline; text-underline-offset: 3px; }
+  .legal-content table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: .9rem; }
+  .legal-content th, .legal-content td { border: 1px solid #F4C7CD; padding: .5rem .75rem; text-align: left; vertical-align: top; }
+  .legal-content th { background: #FCE8EA; color: #231B1D; }
+  .pendiente { background: #FDF0DF; color: #9A6526; padding: 0 .35rem; border-radius: .35rem; font-weight: 600; }
+}
+
+@keyframes kenBurns {
+  0% { transform: scale(1) translate(0, 0); }
+  50% { transform: scale(1.06) translate(-1%, -1%); }
+  100% { transform: scale(1) translate(0, 0); }
+}
+.animate-kenburns { animation: kenBurns 24s ease-in-out infinite; }
+
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity .8s cubic-bezier(0.16, 1, 0.3, 1), transform .8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal.is-visible { opacity: 1; transform: translateY(0); }
+
+.no-scrollbar::-webkit-scrollbar, .scrollbar-none::-webkit-scrollbar { display: none; }
+.no-scrollbar, .scrollbar-none { -ms-overflow-style: none; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+
+.pack-card.is-selected { border-width: 2px; transform: translateY(-3px); }
+
+/* Respeta a quien tiene activada la opción "reducir movimiento" */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto !important; }
+  *, *::before, *::after { animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; }
+  .reveal { opacity: 1; transform: none; }
+  .animate-marquee { animation: none !important; flex-wrap: wrap; white-space: normal; justify-content: center; }
+  .marquee-track > [aria-hidden="true"] { display: none; }
+}

@@ -1,6 +1,6 @@
 {
   "campana": {
-    "activa": true,
+    "activa": false,
     "tema": "san_valentin",
     "etiqueta": "Edición Limitada · Encargos Abiertos",
     "titulo": "Especial San Valentín: Flores que no se marchitan",
@@ -13,7 +13,8 @@
         "precio": "49 €",
         "precio_antes": "58 €",
         "tag": "El más vendido",
-        "imagen": "/img/uploads/images-2.webp"
+        "imagen": "/img/uploads/cris_1_232554-172552754059480.webp",
+        "imagen_orientativa": false
       },
       {
         "nombre": "Ramo 'Suspiro' de Rosas y Eucalipto",
@@ -21,7 +22,8 @@
         "precio": "39 €",
         "precio_antes": "45 €",
         "tag": "Unidades limitadas",
-        "imagen": "https://images.unsplash.com/photo-1526047932273-341f2a7631f9?auto=format&fit=crop&w=900&q=80"
+        "imagen": "/img/uploads/orientativa-ramo-rosas.webp",
+        "imagen_orientativa": true
       },
       {
         "nombre": "Caja Sombrerera Mini Atelier",
@@ -29,9 +31,12 @@
         "precio": "32 €",
         "precio_antes": "",
         "tag": "Detalle Ideal",
-        "imagen": "https://images.unsplash.com/photo-1561181286-d3fee7d55364?auto=format&fit=crop&w=900&q=80"
+        "imagen": "/img/uploads/orientativa-arreglo-caja.webp",
+        "imagen_orientativa": true
       }
-    ]
+    ],
+    "fecha_inicio": "2027-01-15",
+    "fecha_fin": "2027-02-14"
   },
   "pack_items": [
     {
@@ -103,25 +108,28 @@
       "badgeColor": "bg-atelier-berry text-white",
       "precio": "Desde 95 €",
       "descripcion": "Ramo de novia elaborado artesanalmente en nuestro taller de Albacete con flores preservadas y secas seleccionadas pétalo a pétalo.",
-      "imagen": "https://cdn0.bodas.net/vendor/32554/3_2/960/jpg/aa4a0642_1_232554-170566167623101.jpeg"
+      "imagen": "/img/uploads/pantone-ash-rose-17-1514-2_1_232554-172008942288661.webp",
+      "imagen_orientativa": false
     },
     {
-      "titulo": "Composición Nupcial en Tonos Blancos y Salvia",
+      "titulo": "Ramo Nupcial en Tonos Crudos y Trigo",
       "categoria": "novias",
       "etiqueta": "Trabajo Real Morela",
       "badgeColor": "bg-atelier-eucalyptus text-white",
       "precio": "Desde 95 €",
-      "descripcion": "Diseño nupcial real de Morela Arte Floral combinando eucalipto preservado, rosas blancas, hortensia y paniculata con empuñadura de terciopelo.",
-      "imagen": "https://cdn0.bodas.net/vendor/32554/3_2/960/jpg/img-20250115-wa0005_1_232554-173748012629034.jpeg"
+      "descripcion": "Diseño nupcial real de Morela Arte Floral con hortensia preservada en blanco roto, espigas de trigo, lagurus y paniculata. Natural, luminoso y atemporal.",
+      "imagen": "/img/uploads/aa4a0433_1_232554-170566166715693.webp",
+      "imagen_orientativa": false
     },
     {
-      "titulo": "Ramo Boho Chic en Tonos Tierra y Burdeos",
+      "titulo": "Ramo con Carácter en Negro, Burdeos y Rosa",
       "categoria": "novias",
       "etiqueta": "Atelier Novias",
       "badgeColor": "bg-atelier-berry text-white",
       "precio": "Desde 105 €",
-      "descripcion": "Combinación con carácter de rosas preservadas, espigas doradas, broom y follaje otoñal. Ideal para bodas de otoño e invierno.",
-      "imagen": "https://images.unsplash.com/photo-1526047932273-341f2a7631f9?auto=format&fit=crop&w=900&q=80"
+      "descripcion": "Ramo preservado con rosas negras y rosa empolvado, lunaria, helecho y lagurus en burdeos. Para novias que buscan algo diferente.",
+      "imagen": "/img/uploads/images-2.webp",
+      "imagen_orientativa": false
     },
     {
       "titulo": "Cúpula de Cristal 'La Bella y la Bestia'",
@@ -130,7 +138,8 @@
       "badgeColor": "bg-atelier-gold text-white",
       "precio": "Desde 45 €",
       "descripcion": "Cúpula de cristal con base de madera natural, rosa eterna principal y composición botánica a los pies. El regalo estrella para madres y abuelas.",
-      "imagen": "/img/uploads/cris_1_232554-172552754059480.webp"
+      "imagen": "/img/uploads/cris_1_232554-172552754059480.webp",
+      "imagen_orientativa": false
     },
     {
       "titulo": "Pareja de Réplicas en Miniatura para Madres",
@@ -139,7 +148,8 @@
       "badgeColor": "bg-atelier-rose text-white",
       "precio": "Desde 55 € / ud.",
       "descripcion": "Reproducimos tu ramo de novia en tamaño compacto con las mismas flores y cinta para que sorprendas a las madres o a tu mejor amiga en el banquete.",
-      "imagen": "https://images.unsplash.com/photo-1561181286-d3fee7d55364?auto=format&fit=crop&w=900&q=80"
+      "imagen": "/img/uploads/orientativa-arreglo-caja.webp",
+      "imagen_orientativa": true
     },
     {
       "titulo": "Peineta y Horquillas Florales de Novia",
@@ -148,7 +158,8 @@
       "badgeColor": "bg-atelier-plum text-white",
       "precio": "Desde 38 €",
       "descripcion": "Tocado alambrado a mano flor a flor en nuestro taller, diseñado exactamente con los mismos tonos de tu ramo y adaptado a tu recogido o trenza.",
-      "imagen": "https://images.unsplash.com/photo-1522673607200-164d1b6ce486?auto=format&fit=crop&w=900&q=80"
+      "imagen": "/img/uploads/orientativa-tocado.webp",
+      "imagen_orientativa": true
     },
     {
       "titulo": "Corona y Diadema de Primera Comunión",
@@ -157,7 +168,8 @@
       "badgeColor": "bg-atelier-plum text-white",
       "precio": "Desde 35 €",
       "descripcion": "Semicoronas, diademas y apliques para cinturón de Comunión o niñas de arras en tonos empolvados, beige, lavanda o blanco roto.",
-      "imagen": "https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=900&q=80"
+      "imagen": "/img/uploads/orientativa-comunion.webp",
+      "imagen_orientativa": true
     },
     {
       "titulo": "Prendidos de Solapa Coordinados",
@@ -166,7 +178,8 @@
       "badgeColor": "bg-atelier-eucalyptus text-white",
       "precio": "12 € / ud.",
       "descripcion": "Boutonnieres artesanales para el novio, padrino y testigos elaborados con las mismas flores preservadas del ramo nupcial.",
-      "imagen": "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=900&q=80"
+      "imagen": "/img/uploads/orientativa-prendidos.webp",
+      "imagen_orientativa": true
     },
     {
       "titulo": "Pulseras de Damas & Decoración de Coche",
@@ -175,7 +188,8 @@
       "badgeColor": "bg-atelier-skyDeep text-white",
       "precio": "Desde 15 €",
       "descripcion": "Corsages con lazo de seda para damas de honor y prendidos florales para las manetas y bandeja trasera del coche nupcial.",
-      "imagen": "https://images.unsplash.com/photo-1469371670807-013ccf25f16a?auto=format&fit=crop&w=900&q=80"
+      "imagen": "/img/uploads/orientativa-pulseras.webp",
+      "imagen_orientativa": true
     }
   ],
   "contacto": {
@@ -183,6 +197,25 @@
     "whatsapp": "34643922547",
     "direccion": "Calle Blasco de Garay, 12",
     "horario_lv": "L–J: 10:00–13:30 y 17:30–19:30",
-    "horario_sab": "Viernes: 10:00–14:00 · (Verano L–V: 9–14h)"
+    "horario_sab": "Viernes: 10:00–14:00 · (Verano L–V: 9–14h)",
+    "email": ""
+  },
+  "envio": {
+    "coste": "3,99",
+    "gratis_desde": 89,
+    "zona": "España peninsular",
+    "plazo": "Entre 24 y 72 horas laborables desde que el pedido está listo"
+  },
+  "sobre": {
+    "activa": true,
+    "texto": "Morela Arte Floral es un taller artesanal en el centro de Albacete dedicado a las flores preservadas y secas. Diseñamos ramos de novia, réplicas, cúpulas, tocados y detalles para bodas y comuniones, siempre a mano y pieza a pieza.\n\nNos gusta conocer a cada persona antes de empezar: ver su vestido, sus colores y su historia, para que el resultado sea único y dure muchos años.",
+    "imagen": "/img/uploads/aa4a0433_1_232554-170566166715693.webp"
+  },
+  "legal": {
+    "titular": "",
+    "nif": "",
+    "email": "",
+    "registro": "",
+    "actualizado": "2026-11-18"
   }
 }

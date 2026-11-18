@@ -6,28 +6,40 @@
   <title>Morela Arte Floral | Atelier de Flores Preservadas, Novias y Tocados en Albacete</title>
   <meta name="description" content="Atelier artesanal de flores preservadas y secas en Albacete (C. Blasco de Garay, 12). Ramos de novia a medida, cúpulas, réplicas, tocados, comuniones y prendidos. ★ 5.0 en Bodas.net." />
   <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://morelaartefloral.es/" />
+  <meta name="theme-color" content="#8E3746" />
+  <!-- IMPORTANTE: cuando se registre el dominio propio (p. ej. morelaartefloral.es) cambiar esta URL aquí, en og:url, en el JSON-LD, en sitemap.xml y en robots.txt -->
+  <link rel="canonical" href="https://floristeriaalex.netlify.app/" />
 
-  <!-- Favicon SVG -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='%23F9E6E8' stroke='%23C25E6B' stroke-width='4'/%3E%3Ctext x='50' y='67' font-family='Georgia, serif' font-size='54' font-weight='bold' fill='%23231B1D' text-anchor='middle'%3EM%3C/text%3E%3C/svg%3E" />
+  <!-- Iconos -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
-  <!-- Open Graph -->
+  <!-- Open Graph / redes sociales -->
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="es_ES" />
+  <meta property="og:site_name" content="Morela Arte Floral" />
+  <meta property="og:url" content="https://floristeriaalex.netlify.app/" />
   <meta property="og:title" content="Morela Arte Floral | Flores Preservadas y Ramos de Novia en Albacete" />
   <meta property="og:description" content="Ramos de novia artesanales, tocados, réplicas en cúpula y detalles para bodas y comuniones. Diseña tu pack online o visítanos en Albacete." />
-  <meta property="og:image" content="https://cdn0.bodas.net/vendor/32554/3_2/960/jpg/aa4a0642_1_232554-170566167623101.jpeg" />
+  <meta property="og:image" content="https://floristeriaalex.netlify.app/img/og-morela.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Ramo de novia de flores preservadas en tonos rosa empolvado elaborado por Morela Arte Floral" />
   <meta name="twitter:card" content="summary_large_image" />
 
-  <!-- Schema.org JSON-LD con datos reales de Morela Arte Floral -->
+  <!-- Datos estructurados (Schema.org). Sin valoraciones autoasignadas: Google no las admite en la ficha del propio negocio. -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Florist",
+    "@id": "https://floristeriaalex.netlify.app/#negocio",
     "name": "Morela Arte Floral",
+    "url": "https://floristeriaalex.netlify.app/",
+    "logo": "https://floristeriaalex.netlify.app/img/icon-512.png",
     "image": [
-      "https://cdn0.bodas.net/vendor/32554/3_2/960/jpg/aa4a0642_1_232554-170566167623101.jpeg",
-      "https://cdn0.bodas.net/vendor/32554/3_2/960/jpg/img-20250115-wa0005_1_232554-173748012629034.jpeg"
+      "https://floristeriaalex.netlify.app/img/og-morela.jpg",
+      "https://floristeriaalex.netlify.app/img/uploads/aa4a0433_1_232554-170566166715693.webp"
     ],
     "description": "Taller artesanal de flores preservadas y secas en Albacete: ramos de novia personalizados, cúpulas, réplicas, tocados florales, prendidos, comuniones y decoración de coche nupcial.",
     "address": {
@@ -38,18 +50,17 @@
       "addressRegion": "Castilla-La Mancha",
       "addressCountry": "ES"
     },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": 38.9943,
-      "longitude": -1.8585
-    },
+    "geo": { "@type": "GeoCoordinates", "latitude": 38.9943, "longitude": -1.8585 },
     "telephone": "+34643922547",
-    "priceRange": "12€ - 2000€",
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "5.0",
-      "reviewCount": "100"
-    },
+    "priceRange": "12 € - 2000 €",
+    "currenciesAccepted": "EUR",
+    "paymentAccepted": "Tarjeta, Transferencia, Efectivo",
+    "areaServed": [{ "@type": "City", "name": "Albacete" }, { "@type": "Country", "name": "España" }],
+    "openingHoursSpecification": [
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday"], "opens": "10:00", "closes": "13:30" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday"], "opens": "17:30", "closes": "19:30" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Friday", "opens": "10:00", "closes": "14:00" }
+    ],
     "sameAs": [
       "https://www.instagram.com/morelaartefloral/",
       "https://www.tiktok.com/@morelapreservados",
@@ -59,111 +70,14 @@
   }
   </script>
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-  <!-- Tailwind CSS -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            atelier: {
-              cream: '#FCF9F6',
-              sand: '#F5ECE4',
-              blush: '#FCE8EA',
-              blushMid: '#F4C7CD',
-              rose: '#C86472',
-              berry: '#8E3746',
-              sage: '#E3F0E8',
-              sageMid: '#BDE0CA',
-              eucalyptus: '#3D735B',
-              forest: '#234937',
-              lavender: '#EDE8F8',
-              lavenderMid: '#D5C9F0',
-              plum: '#6E5399',
-              amber: '#FDF0DF',
-              amberMid: '#F5D6AC',
-              gold: '#B87B31',
-              sky: '#E6F0F7',
-              skyDeep: '#456D8A'
-            },
-            ink: {
-              DEFAULT: '#231B1D',
-              muted: '#5C5053',
-              soft: '#8A7B7F'
-            }
-          },
-          fontFamily: {
-            serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
-            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif']
-          },
-          boxShadow: {
-            'editorial': '0 22px 50px -12px rgba(142, 55, 70, 0.14)',
-            'card-hover': '0 24px 48px -12px rgba(35, 27, 29, 0.12)',
-            'glass': '0 8px 32px 0 rgba(35, 27, 29, 0.08)'
-          },
-          keyframes: {
-            fadeIn: {
-              '0%': { opacity: 0, transform: 'translateY(10px) scale(0.98)' },
-              '100%': { opacity: 1, transform: 'translateY(0) scale(1)' },
-            },
-            marquee: {
-              '0%': { transform: 'translateX(0%)' },
-              '100%': { transform: 'translateX(-50%)' }
-            }
-          },
-          animation: {
-            'fade-in': 'fadeIn 0.45s cubic-bezier(0.16, 1, 0.3, 1) forwards',
-            'marquee': 'marquee 32s linear infinite'
-          }
-        }
-      }
-    }
-  </script>
-
-  <style>
-    body {
-      background-color: #FCF9F6;
-      color: #231B1D;
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      overflow-x: hidden;
-    }
-    h1, h2, h3, h4, .font-editorial {
-      font-family: 'Cormorant Garamond', serif;
-    }
-    @keyframes kenBurns {
-      0% { transform: scale(1) translate(0, 0); }
-      50% { transform: scale(1.06) translate(-1%, -1%); }
-      100% { transform: scale(1) translate(0, 0); }
-    }
-    .animate-kenburns {
-      animation: kenBurns 24s ease-in-out infinite;
-    }
-    .reveal {
-      opacity: 0;
-      transform: translateY(28px);
-      transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
-                  transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-    .reveal.is-visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    .no-scrollbar::-webkit-scrollbar, .scrollbar-none::-webkit-scrollbar { display: none; }
-    .no-scrollbar, .scrollbar-none { -ms-overflow-style: none; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
-
-    /* Estilos de tarjetas seleccionadas en el configurador */
-    .pack-card.is-selected {
-      border-width: 2px;
-      transform: translateY(-3px);
-    }
-  </style>
+  <!-- Fuentes alojadas en el propio servidor (sin enviar la IP del visitante a Google) -->
+  <link rel="preload" href="/assets/fonts/plus-jakarta-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/cormorant-garamond-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <!-- CSS compilado con Tailwind (npm run build) -->
+  <link rel="stylesheet" href="/assets/css/styles.css">
 </head>
 <body class="bg-atelier-cream text-ink antialiased selection:bg-atelier-blushMid selection:text-ink">
+  <a href="#contenido" class="skip-link">Saltar al contenido</a>
 
   <!-- =========================================================
        1. NAVEGACIÓN FLOTANTE DE ALTA COSTURA
@@ -173,7 +87,7 @@
       <div class="bg-white/90 backdrop-blur-xl border border-atelier-blushMid/60 shadow-glass rounded-full px-4 sm:px-7 h-16 sm:h-20 flex items-center justify-between transition-all duration-300">
         
         <!-- Logo -->
-        <a href="#" class="flex items-center gap-3 group focus:outline-none">
+        <a href="/" aria-label="Morela Arte Floral, ir al inicio" class="flex items-center gap-3 group">
           <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-gradient-to-tr from-atelier-berry via-atelier-rose to-atelier-gold p-[2px] shadow-sm group-hover:rotate-6 transition-transform duration-300">
             <div class="w-full h-full bg-atelier-cream rounded-full flex items-center justify-center">
               <svg class="w-5 h-5 text-atelier-berry" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
@@ -188,7 +102,7 @@
             <span class="block font-serif text-2xl sm:text-3xl font-bold tracking-tight text-ink leading-none">
               Morela
             </span>
-            <span class="block text-[9px] sm:text-[10px] uppercase tracking-[0.24em] text-atelier-berry font-semibold mt-0.5">
+            <span class="block text-[11px] sm:text-[11px] uppercase tracking-[0.24em] text-atelier-berry font-semibold mt-0.5">
               Arte Floral · Albacete
             </span>
           </div>
@@ -227,7 +141,7 @@
             </svg>
           </a>
 
-          <button id="mobile-menu-btn"
+          <button id="mobile-menu-btn" aria-expanded="false" aria-controls="mobile-menu"
                   type="button"
                   aria-label="Abrir menú de navegación"
                   class="lg:hidden p-2.5 rounded-full bg-atelier-blush text-atelier-berry hover:bg-atelier-blushMid transition">
@@ -277,7 +191,7 @@
     </div>
   </header>
 
-  <main>
+  <main id="contenido">
     <!-- =========================================================
          2. HERO EDITORIAL DE ALTO IMPACTO
     ========================================================== -->
@@ -285,10 +199,10 @@
       <div class="absolute inset-0 z-0 overflow-hidden">
         <img 
           id="hero-img"
-          src="https://cdn0.bodas.net/vendor/32554/3_2/960/jpg/aa4a0642_1_232554-170566167623101.jpeg" 
-          alt="Ramo de novia real elaborado por Morela Arte Floral en Albacete"
+          src="/img/uploads/pantone-ash-rose-17-1514-2_1_232554-172008942288661.webp"
+          alt="Ramo de novia de flores preservadas en tonos rosa empolvado elaborado por Morela Arte Floral en Albacete"
+          width="960" height="640"
           fetchpriority="high"
-          onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1526047932273-341f2a7631f9?auto=format&fit=crop&w=2000&q=85';"
           class="w-full h-full object-cover object-center animate-kenburns"
         />
         <!-- Capas de color ricas para dar calidez editorial -->
@@ -297,7 +211,7 @@
       </div>
 
       <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-14 text-center text-white">
-        <!-- Insignia superior verificada (Sin emojis) -->
+        <!-- Insignia superior -->
         <div class="inline-flex flex-wrap items-center justify-center gap-2.5 px-4 py-2 rounded-full bg-white/15 backdrop-blur-md border border-white/30 text-xs sm:text-sm font-medium tracking-wide text-atelier-cream mb-6 shadow-sm">
           <span class="inline-flex items-center gap-1 text-amber-300 font-semibold">
             <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
@@ -336,7 +250,7 @@
          2B. CINTA EDITORIAL ANIMADA (Sustituye a la antigua barra fea)
     ========================================================== -->
     <div class="bg-atelier-berry text-atelier-cream py-3.5 overflow-hidden border-y border-atelier-rose/30 select-none">
-      <div class="flex whitespace-nowrap animate-marquee items-center">
+      <div class="flex whitespace-nowrap animate-marquee items-center marquee-track">
         <!-- Bloque 1 -->
         <div class="flex items-center gap-8 sm:gap-12 px-4 text-xs sm:text-sm font-medium tracking-wider uppercase">
           <span class="flex items-center gap-2.5">
@@ -346,12 +260,12 @@
           <span class="text-atelier-blushMid/50">•</span>
           <span class="flex items-center gap-2.5">
             <svg class="w-4 h-4 text-atelier-amberMid shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/></svg>
-            <span>100% Recomendado por Novias en Bodas.net (5.0 ★)</span>
+            <span>Valoración 5,0 ★ en Bodas.net</span>
           </span>
           <span class="text-atelier-blushMid/50">•</span>
           <span class="flex items-center gap-2.5">
             <svg class="w-4 h-4 text-atelier-amberMid shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg>
-            <span>Envíos Protegidos a Toda España (Gratis &gt; 89 €)</span>
+            <span>Envíos a la Península (gratis desde <span data-envio-gratis>89</span> €)</span>
           </span>
           <span class="text-atelier-blushMid/50">•</span>
           <span class="flex items-center gap-2.5">
@@ -369,12 +283,12 @@
           <span class="text-atelier-blushMid/50">•</span>
           <span class="flex items-center gap-2.5">
             <svg class="w-4 h-4 text-atelier-amberMid shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/></svg>
-            <span>100% Recomendado por Novias en Bodas.net (5.0 ★)</span>
+            <span>Valoración 5,0 ★ en Bodas.net</span>
           </span>
           <span class="text-atelier-blushMid/50">•</span>
           <span class="flex items-center gap-2.5">
             <svg class="w-4 h-4 text-atelier-amberMid shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg>
-            <span>Envíos Protegidos a Toda España (Gratis &gt; 89 €)</span>
+            <span>Envíos a la Península (gratis desde <span data-envio-gratis>89</span> €)</span>
           </span>
           <span class="text-atelier-blushMid/50">•</span>
           <span class="flex items-center gap-2.5">
@@ -433,7 +347,7 @@
             </div>
             <div>
               <h4 class="font-serif text-xl font-bold text-ink">Garantía de Atelier &amp; Flores Preservadas</h4>
-              <p class="text-xs sm:text-sm text-ink-muted mt-0.5">Recogida disponible en taller (C. Blasco de Garay, 12, Albacete) o envíos protegidos a toda España.</p>
+              <p class="text-xs sm:text-sm text-ink-muted mt-0.5">Recogida disponible en taller (C. Blasco de Garay, 12, Albacete) o envío protegido a la Península.</p>
             </div>
           </div>
           <a id="campana-footer-cta" href="#" target="_blank" rel="noopener noreferrer"
@@ -469,20 +383,20 @@
           </div>
 
           <!-- Filtros de Categoría Reales -->
-          <div class="flex items-center gap-2 overflow-x-auto no-scrollbar pb-1" role="tablist" aria-label="Filtrar catálogo floral">
-            <button type="button" data-filter="all" class="gallery-filter-btn bg-atelier-berry text-white text-xs sm:text-sm font-semibold px-4 sm:px-5 py-2.5 rounded-full transition-all shrink-0 shadow-sm">
+          <div class="flex items-center gap-2 overflow-x-auto no-scrollbar pb-1" role="group" aria-label="Filtrar catálogo floral">
+            <button type="button" data-filter="all" aria-pressed="true" class="gallery-filter-btn bg-atelier-berry text-white text-xs sm:text-sm font-semibold px-4 sm:px-5 py-2.5 rounded-full transition-all shrink-0 shadow-sm">
               Todo el Catálogo (9)
             </button>
-            <button type="button" data-filter="novias" class="gallery-filter-btn bg-white hover:bg-atelier-blush text-ink border border-atelier-blushMid text-xs sm:text-sm font-semibold px-4 sm:px-5 py-2.5 rounded-full transition-all shrink-0">
+            <button type="button" data-filter="novias" aria-pressed="false" class="gallery-filter-btn bg-white hover:bg-atelier-blush text-ink border border-atelier-blushMid text-xs sm:text-sm font-semibold px-4 sm:px-5 py-2.5 rounded-full transition-all shrink-0">
               Ramos de Novia
             </button>
-            <button type="button" data-filter="cupulas" class="gallery-filter-btn bg-white hover:bg-atelier-amber text-ink border border-atelier-amberMid text-xs sm:text-sm font-semibold px-4 sm:px-5 py-2.5 rounded-full transition-all shrink-0">
+            <button type="button" data-filter="cupulas" aria-pressed="false" class="gallery-filter-btn bg-white hover:bg-atelier-amber text-ink border border-atelier-amberMid text-xs sm:text-sm font-semibold px-4 sm:px-5 py-2.5 rounded-full transition-all shrink-0">
               Cúpulas y Réplicas
             </button>
-            <button type="button" data-filter="tocados" class="gallery-filter-btn bg-white hover:bg-atelier-lavender text-ink border border-atelier-lavenderMid text-xs sm:text-sm font-semibold px-4 sm:px-5 py-2.5 rounded-full transition-all shrink-0">
+            <button type="button" data-filter="tocados" aria-pressed="false" class="gallery-filter-btn bg-white hover:bg-atelier-lavender text-ink border border-atelier-lavenderMid text-xs sm:text-sm font-semibold px-4 sm:px-5 py-2.5 rounded-full transition-all shrink-0">
               Tocados y Comunión
             </button>
-            <button type="button" data-filter="detalles" class="gallery-filter-btn bg-white hover:bg-atelier-sage text-ink border border-atelier-sageMid text-xs sm:text-sm font-semibold px-4 sm:px-5 py-2.5 rounded-full transition-all shrink-0">
+            <button type="button" data-filter="detalles" aria-pressed="false" class="gallery-filter-btn bg-white hover:bg-atelier-sage text-ink border border-atelier-sageMid text-xs sm:text-sm font-semibold px-4 sm:px-5 py-2.5 rounded-full transition-all shrink-0">
               Prendidos, Damas y Coche
             </button>
           </div>
@@ -544,7 +458,7 @@
               <div>
                 <div class="flex items-center justify-between mb-3">
                   <span class="text-xs font-bold uppercase tracking-wider text-ink">1. Elige tus piezas y unidades</span>
-                  <span class="text-[11px] font-medium text-atelier-berry">Precios base reales de taller</span>
+                  <span class="text-[11px] font-medium text-atelier-berry">Precios orientativos · IVA incluido</span>
                 </div>
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 sm:gap-3.5" id="pack-items-container"></div>
               </div>
@@ -562,7 +476,7 @@
                       <span class="w-5 h-5 rounded-full bg-[#F5ECE4] border border-white"></span>
                     </div>
                     <span class="text-xs font-bold text-ink leading-tight">Rosa &amp; Blush</span>
-                    <span class="text-[10px] text-ink-muted">Romántico y suave</span>
+                    <span class="text-[11px] text-ink-muted">Romántico y suave</span>
                   </button>
 
                   <button type="button" data-palette="Blanco Puro, Beige & Eucalipto" class="palette-btn flex flex-col items-start p-3 rounded-xl border-2 border-transparent bg-white/70 hover:bg-white transition text-left">
@@ -572,7 +486,7 @@
                       <span class="w-5 h-5 rounded-full bg-[#D8C7B8] border border-white"></span>
                     </div>
                     <span class="text-xs font-bold text-ink leading-tight">Blanco &amp; Verde</span>
-                    <span class="text-[10px] text-ink-muted">Clásico y natural</span>
+                    <span class="text-[11px] text-ink-muted">Clásico y natural</span>
                   </button>
 
                   <button type="button" data-palette="Tierra, Terracota & Boho" class="palette-btn flex flex-col items-start p-3 rounded-xl border-2 border-transparent bg-white/70 hover:bg-white transition text-left">
@@ -582,7 +496,7 @@
                       <span class="w-5 h-5 rounded-full bg-[#F5D6AC] border border-white"></span>
                     </div>
                     <span class="text-xs font-bold text-ink leading-tight">Tierra &amp; Burdeos</span>
-                    <span class="text-[10px] text-ink-muted">Boho con carácter</span>
+                    <span class="text-[11px] text-ink-muted">Boho con carácter</span>
                   </button>
 
                   <button type="button" data-palette="Malva, Lavanda & Silvestre" class="palette-btn flex flex-col items-start p-3 rounded-xl border-2 border-transparent bg-white/70 hover:bg-white transition text-left">
@@ -592,7 +506,7 @@
                       <span class="w-5 h-5 rounded-full bg-[#8FA89B] border border-white"></span>
                     </div>
                     <span class="text-xs font-bold text-ink leading-tight">Malva &amp; Silvestre</span>
-                    <span class="text-[10px] text-ink-muted">Fresco y campestre</span>
+                    <span class="text-[11px] text-ink-muted">Fresco y campestre</span>
                   </button>
                 </div>
               </div>
@@ -613,7 +527,7 @@
                   </label>
                   <label class="cursor-pointer flex items-center gap-2.5 p-3.5 rounded-xl border-2 border-atelier-lavenderMid bg-atelier-lavender/50 hover:bg-atelier-lavender transition text-xs font-semibold text-ink">
                     <input type="radio" name="delivery-mode" value="Envío protegido a domicilio (Península)" class="accent-atelier-plum w-4 h-4 shrink-0" />
-                    <span>Envío a toda España</span>
+                    <span>Envío a la Península</span>
                   </label>
                 </div>
               </div>
@@ -628,7 +542,7 @@
                   <h3 class="font-serif text-3xl font-bold text-ink">Resumen del Pack</h3>
                 </div>
                 <span id="shipping-badge" class="text-[11px] font-bold px-3 py-1.5 rounded-full bg-atelier-sage text-atelier-forest border border-atelier-sageMid shadow-sm">
-                  Envío Gratis (&gt;89 €)
+                  Envío gratis
                 </span>
               </div>
 
@@ -656,7 +570,8 @@
               <div class="bg-ink text-white rounded-2xl p-4 sm:p-5 flex items-center justify-between shadow-md">
                 <div>
                   <span class="text-xs text-white/75 block">Presupuesto orientativo desde</span>
-                  <span class="text-[11px] text-atelier-sageMid font-medium">Incluye asesoría floral personalizada</span>
+                  <span class="text-[11px] text-atelier-sageMid font-medium block">IVA incluido · Envío no incluido</span>
+                  <span class="text-[11px] text-white/75 font-medium">Incluye asesoría floral personalizada</span>
                 </div>
                 <span id="estimated-total" class="font-serif text-4xl sm:text-5xl font-bold text-atelier-blushMid">0 €</span>
               </div>
@@ -674,6 +589,11 @@
                 <span>Consultar Disponibilidad y Presupuesto</span>
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
               </button>
+              <p class="text-[11px] text-ink-muted leading-relaxed">
+                Al pulsar se abrirá WhatsApp con tu propuesta. Es un presupuesto orientativo, no un pedido: el precio final te lo confirmamos tras la asesoría.
+                WhatsApp es un servicio de Meta; consulta nuestra <a href="/privacidad.html" class="underline underline-offset-2 hover:text-atelier-berry">Política de Privacidad</a>
+                y las <a href="/condiciones.html" class="underline underline-offset-2 hover:text-atelier-berry">Condiciones de venta</a>.
+              </p>
             </div>
 
           </div>
@@ -766,7 +686,7 @@
                 Recógelo en nuestro taller de Albacete o recíbelo en casa en caja protegida semanas antes del evento, incluso para tu prueba de vestido.
               </p>
             </div>
-            <span class="mt-4 inline-block text-[11px] font-bold uppercase tracking-wider text-atelier-forest">Envíos a toda España</span>
+            <span class="mt-4 inline-block text-[11px] font-bold uppercase tracking-wider text-atelier-forest">Envíos a la Península</span>
           </div>
         </div>
 
@@ -792,7 +712,7 @@
 
           <a href="https://www.bodas.net/floristerias/morela-arte-floral--e232554" target="_blank" rel="noopener noreferrer"
              class="inline-flex items-center gap-2 bg-white hover:bg-atelier-blush text-ink text-xs sm:text-sm font-semibold px-5 py-3 rounded-full border border-atelier-blushMid shadow-sm transition self-start">
-            <span>Ver ficha oficial en Bodas.net</span>
+            <span>Leer todas las opiniones en Bodas.net</span>
             <svg class="w-4 h-4 text-atelier-berry" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
           </a>
         </div>
@@ -819,7 +739,7 @@
             <div class="mt-6 pt-4 border-t border-atelier-sand flex items-center justify-between">
               <div>
                 <span class="block font-bold text-xs sm:text-sm text-ink">Salomé</span>
-                <span class="text-[11px] text-ink-muted">Novia verificada en Bodas.net</span>
+                <span class="text-[11px] text-ink-muted">Opinión publicada en Bodas.net</span>
               </div>
               <span class="text-xs font-bold text-atelier-eucalyptus">★ 5.0</span>
             </div>
@@ -844,7 +764,7 @@
             <div class="mt-6 pt-4 border-t border-atelier-sand flex items-center justify-between">
               <div>
                 <span class="block font-bold text-xs sm:text-sm text-ink">Boda en Albacete</span>
-                <span class="text-[11px] text-ink-muted">Novia verificada en Bodas.net</span>
+                <span class="text-[11px] text-ink-muted">Opinión publicada en Bodas.net</span>
               </div>
               <span class="text-xs font-bold text-atelier-eucalyptus">★ 5.0</span>
             </div>
@@ -869,13 +789,18 @@
             <div class="mt-6 pt-4 border-t border-atelier-sand flex items-center justify-between">
               <div>
                 <span class="block font-bold text-xs sm:text-sm text-ink">Evento &amp; Boda</span>
-                <span class="text-[11px] text-ink-muted">Reseña verificada en Albacete</span>
+                <span class="text-[11px] text-ink-muted">Opinión publicada en Bodas.net</span>
               </div>
               <span class="text-xs font-bold text-atelier-eucalyptus">★ 5.0</span>
             </div>
           </article>
 
         </div>
+        <p class="mt-8 text-xs text-ink-muted max-w-3xl">
+          Opiniones reproducidas de nuestra ficha pública en Bodas.net, la plataforma donde las parejas valoran a sus proveedores.
+          Mostramos una selección sin editar su contenido; puedes leerlas todas en
+          <a href="https://www.bodas.net/floristerias/morela-arte-floral--e232554" target="_blank" rel="noopener noreferrer" class="underline underline-offset-2 hover:text-atelier-berry">Bodas.net</a>.
+        </p>
       </div>
     </section>
 
@@ -893,7 +818,7 @@
             Vive cómo nacen nuestras flores <span class="italic font-normal text-atelier-berry">día a día</span>
           </h2>
           <p class="text-sm sm:text-base text-ink-muted">
-            Publicamos a diario vídeos del montaje artesanal de cada ramo, ideas para regalos del Día de la Madre, comuniones y entregas reales a novias.
+            Publicamos vídeos del montaje artesanal de cada ramo, ideas para regalos del Día de la Madre, comuniones y entregas reales a novias.
           </p>
         </div>
 
@@ -913,7 +838,7 @@
                 </span>
               </div>
               <div class="p-6 space-y-2">
-                <span class="text-[10px] font-bold uppercase tracking-widest text-atelier-berry">Catálogo Diario &amp; Stories</span>
+                <span class="text-[11px] font-bold uppercase tracking-widest text-atelier-berry">Catálogo Diario &amp; Stories</span>
                 <h3 class="font-serif text-2xl font-bold text-ink">Instagram Oficial</h3>
                 <p class="text-xs sm:text-sm text-ink-muted leading-relaxed">
                   Descubre los últimos ramos entregados, combinaciones de colores en tendencia y trabajos recién salidos del taller.
@@ -941,7 +866,7 @@
                 </span>
               </div>
               <div class="p-6 space-y-2">
-                <span class="text-[10px] font-bold uppercase tracking-widest text-atelier-plum">Making-Of en Vídeo</span>
+                <span class="text-[11px] font-bold uppercase tracking-widest text-atelier-plum">Making-Of en Vídeo</span>
                 <h3 class="font-serif text-2xl font-bold text-ink">TikTok del Taller</h3>
                 <p class="text-xs sm:text-sm text-ink-muted leading-relaxed">
                   Mira cómo montamos paso a paso cada ramo, cúpula y tocado floral con música y detalles de cerca.
@@ -970,14 +895,14 @@
                   </svg>
                 </div>
                 <span class="text-xs font-bold bg-white/20 backdrop-blur-md px-3 py-1 rounded-full border border-white/30">
-                  ★ 5.0 · 100% Recomendado
+                  ★ 5,0 en Bodas.net
                 </span>
               </div>
               <div class="p-6 space-y-2">
-                <span class="text-[10px] font-bold uppercase tracking-widest text-atelier-eucalyptus">Proveedor Oficial Nupcial</span>
+                <span class="text-[11px] font-bold uppercase tracking-widest text-atelier-eucalyptus">Bodas &amp; Eventos</span>
                 <h3 class="font-serif text-2xl font-bold text-ink">Bodas.net</h3>
                 <p class="text-xs sm:text-sm text-ink-muted leading-relaxed">
-                  Consulta nuestras valoraciones verificadas 5 sobre 5 en calidad, flexibilidad, trato y relación calidad/precio.
+                  Lee las valoraciones de las parejas en nuestra ficha: 5,0 sobre 5 en calidad, flexibilidad, trato y relación calidad/precio.
                 </p>
               </div>
             </div>
@@ -1002,7 +927,7 @@
                 </span>
               </div>
               <div class="p-6 space-y-2">
-                <span class="text-[10px] font-bold uppercase tracking-widest text-atelier-gold">Campañas &amp; Eventos</span>
+                <span class="text-[11px] font-bold uppercase tracking-widest text-atelier-gold">Campañas &amp; Eventos</span>
                 <h3 class="font-serif text-2xl font-bold text-ink">Facebook</h3>
                 <p class="text-xs sm:text-sm text-ink-muted leading-relaxed">
                   Álbumes de campañas especiales (Día de la Madre, San Valentín, Comuniones y encargos para regalo).
@@ -1017,6 +942,24 @@
             </div>
           </a>
 
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         7B. SOBRE MORELA (texto editable desde el panel, sección "Sobre Morela")
+    ========================================================== -->
+    <section id="sobre" class="hidden py-16 sm:py-24 bg-white scroll-mt-16" aria-labelledby="sobre-titulo">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        <div class="lg:col-span-5">
+          <img id="sobre-imagen" src="/img/uploads/aa4a0433_1_232554-170566166715693.webp" width="960" height="640" loading="lazy"
+               alt="Ramo de novia en tonos crudos elaborado en el taller de Morela Arte Floral"
+               class="w-full h-80 sm:h-[26rem] object-cover rounded-3xl shadow-editorial border border-atelier-blushMid" />
+        </div>
+        <div class="lg:col-span-7 space-y-4">
+          <span class="inline-block text-xs font-bold uppercase tracking-widest text-atelier-berry">Quiénes somos</span>
+          <h2 id="sobre-titulo" class="font-serif text-4xl sm:text-5xl font-bold text-ink leading-tight">Sobre Morela</h2>
+          <div id="sobre-texto" class="space-y-3 text-sm sm:text-base text-ink-muted leading-relaxed"></div>
         </div>
       </div>
     </section>
@@ -1069,6 +1012,9 @@
                 <span class="font-semibold text-ink">Facilidades de pago:</span>
                 <span>Tarjeta · Transferencia · Efectivo</span>
               </div>
+              <p id="contact-email-wrap" class="hidden text-sm text-ink-muted">
+                Email: <a id="contact-email-link" href="#" class="font-semibold text-atelier-berry underline underline-offset-2"></a>
+              </p>
 
               <div class="flex flex-wrap items-center gap-3.5">
                 <a href="https://www.google.com/maps/search/?api=1&query=Morela+Arte+Floral+Calle+Blasco+de+Garay+12+02003+Albacete"
@@ -1093,7 +1039,7 @@
                 <div class="bg-white rounded-2xl border border-atelier-blushMid/70 overflow-hidden">
                   <button type="button" class="faq-btn w-full px-5 py-4 text-left flex items-center justify-between gap-3 text-xs sm:text-sm font-bold text-ink hover:bg-atelier-blush/30 transition">
                     <span>¿Con cuánta antelación debo encargar mi ramo o pack de boda?</span>
-                    <span class="faq-icon text-lg text-atelier-berry shrink-0">＋</span>
+                    <span class="faq-icon text-lg text-atelier-berry shrink-0" aria-hidden="true">＋</span>
                   </button>
                   <div class="faq-content hidden px-5 pb-4 text-xs sm:text-sm text-ink-muted leading-relaxed">
                     Lo ideal es contactar con <strong>5 o 6 meses de antelación</strong>, ya que en Morela trabajamos con agenda limitada para dedicarle a cada novia el tiempo que merece. Si tu fecha está más próxima, escríbenos para consultar hueco disponible.
@@ -1103,7 +1049,7 @@
                 <div class="bg-white rounded-2xl border border-atelier-blushMid/70 overflow-hidden">
                   <button type="button" class="faq-btn w-full px-5 py-4 text-left flex items-center justify-between gap-3 text-xs sm:text-sm font-bold text-ink hover:bg-atelier-blush/30 transition">
                     <span>¿Son flores naturales de verdad? ¿Cuánto duran?</span>
-                    <span class="faq-icon text-lg text-atelier-berry shrink-0">＋</span>
+                    <span class="faq-icon text-lg text-atelier-berry shrink-0" aria-hidden="true">＋</span>
                   </button>
                   <div class="faq-content hidden px-5 pb-4 text-xs sm:text-sm text-ink-muted leading-relaxed">
                     Sí, son flores <strong>100% naturales</strong> sometidas a un proceso ecológico de preservación donde la savia se sustituye por un compuesto vegetal. Mantienen su tacto y aspecto durante <strong>años</strong> sin necesitar agua.
@@ -1113,28 +1059,124 @@
                 <div class="bg-white rounded-2xl border border-atelier-blushMid/70 overflow-hidden">
                   <button type="button" class="faq-btn w-full px-5 py-4 text-left flex items-center justify-between gap-3 text-xs sm:text-sm font-bold text-ink hover:bg-atelier-blush/30 transition">
                     <span>¿Hacéis envíos nacionales fuera de Albacete?</span>
-                    <span class="faq-icon text-lg text-atelier-berry shrink-0">＋</span>
+                    <span class="faq-icon text-lg text-atelier-berry shrink-0" aria-hidden="true">＋</span>
                   </button>
                   <div class="faq-content hidden px-5 pb-4 text-xs sm:text-sm text-ink-muted leading-relaxed">
-                    ¡Por supuesto! Enviamos a toda España peninsular en cajas protegidas a medida. El envío cuesta solo <strong>3,99 €</strong> y es <strong>totalmente gratuito en compras superiores a 89 €</strong>.
+                    ¡Por supuesto! Enviamos a la España peninsular en cajas protegidas a medida. El envío cuesta <strong><span data-envio-coste>3,99</span> €</strong> y es <strong>gratuito a partir de <span data-envio-gratis>89</span> €</strong>. Para Baleares, Canarias, Ceuta, Melilla o el extranjero, consúltanos antes de encargar. Más información en las <a href="/condiciones.html" class="underline underline-offset-2 text-atelier-berry">Condiciones de venta</a>.
                   </div>
                 </div>
 
                 <div class="bg-white rounded-2xl border border-atelier-blushMid/70 overflow-hidden">
                   <button type="button" class="faq-btn w-full px-5 py-4 text-left flex items-center justify-between gap-3 text-xs sm:text-sm font-bold text-ink hover:bg-atelier-blush/30 transition">
                     <span>¿Qué cuidados necesitan las flores preservadas?</span>
-                    <span class="faq-icon text-lg text-atelier-berry shrink-0">＋</span>
+                    <span class="faq-icon text-lg text-atelier-berry shrink-0" aria-hidden="true">＋</span>
                   </button>
                   <div class="faq-content hidden px-5 pb-4 text-xs sm:text-sm text-ink-muted leading-relaxed">
                     No deben ponerse en agua ni exponerse al sol directo de forma prolongada o ambientes muy húmedos. Para limpiar el polvo basta con un plumero suave o secador en aire frío a distancia.
                   </div>
                 </div>
 
+                <div class="bg-white rounded-2xl border border-atelier-blushMid/70 overflow-hidden">
+                  <button type="button" class="faq-btn w-full px-5 py-4 text-left flex items-center justify-between gap-3 text-xs sm:text-sm font-bold text-ink hover:bg-atelier-blush/30 transition">
+                    <span>¿Puedo devolver un pedido?</span>
+                    <span class="faq-icon text-lg text-atelier-berry shrink-0" aria-hidden="true">＋</span>
+                  </button>
+                  <div class="faq-content hidden px-5 pb-4 text-xs sm:text-sm text-ink-muted leading-relaxed">
+                    Las piezas hechas a medida (ramos de novia, réplicas de tu ramo, tocados personalizados…) no admiten desistimiento por ley, porque se elaboran según tus indicaciones. Los productos no personalizados que compres a distancia, como cúpulas o detalles de campaña, puedes devolverlos en un plazo de <strong>14 días naturales</strong> desde que los recibes. Todos los detalles en las <a href="/condiciones.html" class="underline underline-offset-2 text-atelier-berry">Condiciones de venta</a>.
+                  </div>
+                </div>
+                <div class="bg-white rounded-2xl border border-atelier-blushMid/70 overflow-hidden">
+                  <button type="button" class="faq-btn w-full px-5 py-4 text-left flex items-center justify-between gap-3 text-xs sm:text-sm font-bold text-ink hover:bg-atelier-blush/30 transition">
+                    <span>¿Preserváis mi ramo de novia natural después de la boda?</span>
+                    <span class="faq-icon text-lg text-atelier-berry shrink-0" aria-hidden="true">＋</span>
+                  </button>
+                  <div class="faq-content hidden px-5 pb-4 text-xs sm:text-sm text-ink-muted leading-relaxed">
+                    Sí, también trabajamos la preservación de ramos y flores con valor sentimental. Cada caso es distinto según el tipo de flor y su estado, así que escríbenos por WhatsApp o ven al taller y te contamos qué se puede hacer y el presupuesto.
+                  </div>
+                </div>
               </div>
             </div>
 
           </div>
         </div>
+      </div>
+    </section>
+    <!-- =========================================================
+         8B. FORMULARIO DE CONTACTO (Netlify Forms) – alternativa a WhatsApp
+    ========================================================== -->
+    <section id="contacto" class="py-16 sm:py-24 bg-gradient-to-b from-atelier-cream to-atelier-blush/40 scroll-mt-16" aria-labelledby="contacto-titulo">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-10">
+          <span class="inline-block text-xs font-bold uppercase tracking-widest text-atelier-berry mb-3">¿Prefieres no usar WhatsApp?</span>
+          <h2 id="contacto-titulo" class="font-serif text-4xl sm:text-5xl font-bold text-ink leading-tight">Escríbenos</h2>
+          <p class="mt-3 text-sm sm:text-base text-ink-muted">Cuéntanos qué necesitas y te respondemos por email o teléfono en horario de taller.</p>
+        </div>
+
+        <form name="contacto" method="POST" action="/gracias.html" data-netlify="true" netlify-honeypot="bot-field"
+              class="bg-white rounded-3xl p-6 sm:p-8 border border-atelier-blushMid shadow-editorial space-y-5">
+          <input type="hidden" name="form-name" value="contacto" />
+          <p class="hidden"><label>No rellenar si eres humano: <input name="bot-field" /></label></p>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            <div>
+              <label for="cf-nombre" class="block text-sm font-semibold text-ink mb-1.5">Nombre <span aria-hidden="true" class="text-atelier-berry">*</span></label>
+              <input id="cf-nombre" name="nombre" type="text" required autocomplete="name"
+                     class="w-full rounded-xl border border-atelier-sand bg-atelier-cream/60 px-4 py-3 text-sm focus:border-atelier-berry focus:ring-0" />
+            </div>
+            <div>
+              <label for="cf-email" class="block text-sm font-semibold text-ink mb-1.5">Email <span aria-hidden="true" class="text-atelier-berry">*</span></label>
+              <input id="cf-email" name="email" type="email" required autocomplete="email"
+                     class="w-full rounded-xl border border-atelier-sand bg-atelier-cream/60 px-4 py-3 text-sm focus:border-atelier-berry focus:ring-0" />
+            </div>
+            <div>
+              <label for="cf-telefono" class="block text-sm font-semibold text-ink mb-1.5">Teléfono (opcional)</label>
+              <input id="cf-telefono" name="telefono" type="tel" autocomplete="tel"
+                     class="w-full rounded-xl border border-atelier-sand bg-atelier-cream/60 px-4 py-3 text-sm focus:border-atelier-berry focus:ring-0" />
+            </div>
+            <div>
+              <label for="cf-fecha" class="block text-sm font-semibold text-ink mb-1.5">Fecha del evento (opcional)</label>
+              <input id="cf-fecha" name="fecha_evento" type="date"
+                     class="w-full rounded-xl border border-atelier-sand bg-atelier-cream/60 px-4 py-3 text-sm focus:border-atelier-berry focus:ring-0" />
+            </div>
+          </div>
+          <div>
+            <label for="cf-tipo" class="block text-sm font-semibold text-ink mb-1.5">¿Qué te interesa?</label>
+            <select id="cf-tipo" name="tipo"
+                    class="w-full rounded-xl border border-atelier-sand bg-atelier-cream/60 px-4 py-3 text-sm focus:border-atelier-berry focus:ring-0">
+              <option>Ramo de novia / pack de boda</option>
+              <option>Cúpula, réplica o regalo</option>
+              <option>Tocado o detalle de comunión</option>
+              <option>Preservar mi ramo</option>
+              <option>Otro</option>
+            </select>
+          </div>
+          <div>
+            <label for="cf-mensaje" class="block text-sm font-semibold text-ink mb-1.5">Mensaje <span aria-hidden="true" class="text-atelier-berry">*</span></label>
+            <textarea id="cf-mensaje" name="mensaje" rows="5" required
+                      class="w-full rounded-xl border border-atelier-sand bg-atelier-cream/60 px-4 py-3 text-sm focus:border-atelier-berry focus:ring-0"></textarea>
+          </div>
+
+          <!-- Primera capa de información (art. 13 RGPD) -->
+          <div class="text-[11px] text-ink-muted leading-relaxed bg-atelier-cream rounded-xl p-4 border border-atelier-sand">
+            <p><strong class="text-ink">Información básica sobre protección de datos.</strong>
+              Responsable: <span data-legal-field="titular">Morela Arte Floral</span>.
+              Finalidad: responder a tu consulta y, si lo pides, preparar tu presupuesto.
+              Legitimación: tu solicitud (medidas precontractuales) y tu consentimiento.
+              Destinatarios: no se ceden datos a terceros, salvo el proveedor de alojamiento web (Netlify), que actúa como encargado del tratamiento.
+              Derechos: acceso, rectificación, supresión y otros, como se explica en la
+              <a href="/privacidad.html" class="underline underline-offset-2 text-atelier-berry">Política de Privacidad</a>.</p>
+          </div>
+          <label class="flex items-start gap-3 text-sm text-ink">
+            <input type="checkbox" name="acepta_privacidad" value="si" required class="mt-1 rounded border-atelier-blushMid text-atelier-berry focus:ring-atelier-berry" />
+            <span>He leído la <a href="/privacidad.html" class="underline underline-offset-2 text-atelier-berry">Política de Privacidad</a> y acepto que se usen mis datos para responder a mi consulta. <span aria-hidden="true" class="text-atelier-berry">*</span></span>
+          </label>
+
+          <button type="submit"
+                  class="w-full py-4 px-6 rounded-2xl bg-gradient-to-r from-atelier-berry to-atelier-rose hover:from-ink hover:to-ink text-white font-bold text-sm transition-all duration-300 shadow-lg">
+            Enviar consulta
+          </button>
+          <p class="text-[11px] text-ink-muted text-center">Los campos marcados con * son obligatorios.</p>
+        </form>
       </div>
     </section>
   </main>
@@ -1179,16 +1221,22 @@
             <span id="footer-contact-address">Calle Blasco de Garay, 12</span><br />
             02003 Albacete (Castilla-La Mancha)<br />
             Tel / WhatsApp: <strong id="footer-contact-phone" class="text-white">643 92 25 47</strong>
+            <span id="footer-email-wrap" class="hidden"><br />Email: <a id="footer-email-link" href="#" class="text-white underline underline-offset-2"></a></span>
           </p>
         </div>
       </div>
 
-      <div class="mt-10 pt-6 border-t border-white/15 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-white/60">
-        <p>© <span id="current-year">2026</span> Morela Arte Floral · Todos los derechos reservados.</p>
-        <div class="flex flex-wrap items-center justify-center gap-5">
-          <button type="button" data-legal="aviso" class="open-legal-modal hover:text-white underline underline-offset-4 transition">Aviso Legal</button>
-          <button type="button" data-legal="privacidad" class="open-legal-modal hover:text-white underline underline-offset-4 transition">Política de Privacidad</button>
-          <button type="button" data-legal="cookies" class="open-legal-modal hover:text-white underline underline-offset-4 transition">Política de Cookies</button>
+      <div class="mt-10 pt-6 border-t border-white/10 space-y-4 text-xs text-white/70">
+        <p id="footer-legal-line" class="leading-relaxed"></p>
+        <p class="leading-relaxed">Hay hojas de reclamaciones a disposición de las personas consumidoras en nuestro establecimiento de Albacete y también puedes enviarnos tu reclamación por email.</p>
+        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+          <p>© <span id="current-year">2026</span> Morela Arte Floral · Todos los derechos reservados.</p>
+          <nav aria-label="Información legal" class="flex flex-wrap gap-x-5 gap-y-2">
+            <a href="/aviso-legal.html" class="hover:text-white underline underline-offset-4 transition">Aviso Legal</a>
+            <a href="/privacidad.html" class="hover:text-white underline underline-offset-4 transition">Política de Privacidad</a>
+            <a href="/cookies.html" class="hover:text-white underline underline-offset-4 transition">Política de Cookies</a>
+            <a href="/condiciones.html" class="hover:text-white underline underline-offset-4 transition">Condiciones de venta, envíos y devoluciones</a>
+          </nav>
         </div>
       </div>
     </div>
@@ -1199,18 +1247,19 @@
   ========================================================== -->
   
   <!-- Lightbox con Ficha de Producto + Botón directo al Configurador -->
-  <div id="lightbox-modal" class="fixed inset-0 z-[60] hidden items-center justify-center p-4 bg-ink/85 backdrop-blur-md">
+  <div id="lightbox-modal" role="dialog" aria-modal="true" aria-labelledby="lightbox-title" class="fixed inset-0 z-[60] hidden items-center justify-center p-4 bg-ink/85 backdrop-blur-md">
     <div class="bg-white rounded-3xl max-w-3xl w-full overflow-hidden shadow-2xl border border-atelier-blushMid grid grid-cols-1 md:grid-cols-12 animate-fade-in relative">
       <button id="close-lightbox-btn" type="button" aria-label="Cerrar ventana" class="absolute top-3.5 right-3.5 w-9 h-9 rounded-full bg-white/90 hover:bg-atelier-berry text-ink hover:text-white flex items-center justify-center font-bold text-base transition-colors z-10 shadow-md">✕</button>
       
       <div class="md:col-span-7 h-72 sm:h-96 md:h-full bg-atelier-sand">
-        <img id="lightbox-img" class="w-full h-full object-cover" src="" alt="Detalle de creación floral">
+        <img id="lightbox-img" class="w-full h-full object-cover" src="data:," alt="">
       </div>
       
       <div class="md:col-span-5 p-6 sm:p-7 flex flex-col justify-between bg-atelier-cream">
         <div class="space-y-3">
-          <span id="lightbox-badge" class="inline-block text-[10px] font-bold uppercase tracking-widest text-atelier-berry bg-atelier-blush px-3 py-1 rounded-full">Categoría</span>
+          <span id="lightbox-badge" class="inline-block text-[11px] font-bold uppercase tracking-widest text-atelier-berry bg-atelier-blush px-3 py-1 rounded-full">Categoría</span>
           <h3 id="lightbox-title" class="font-serif text-2xl sm:text-3xl font-bold text-ink leading-tight">Título</h3>
+          <p id="lightbox-note" class="hidden text-[11px] text-ink-muted italic"></p>
           <p id="lightbox-price" class="text-sm font-bold text-atelier-eucalyptus">Precio</p>
           <p id="lightbox-desc" class="text-xs sm:text-sm text-ink-muted leading-relaxed">Descripción</p>
         </div>
@@ -1224,17 +1273,6 @@
           </a>
         </div>
       </div>
-    </div>
-  </div>
-
-  <!-- Modal Legal -->
-  <div id="legal-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-ink/65 backdrop-blur-sm">
-    <div class="bg-white rounded-3xl max-w-2xl w-full max-h-[82vh] flex flex-col p-6 sm:p-8 border border-atelier-blushMid shadow-2xl relative animate-fade-in">
-      <div class="flex items-center justify-between border-b border-atelier-sand pb-3.5">
-        <h3 id="legal-modal-title" class="font-serif text-2xl sm:text-3xl font-bold text-ink">Información Legal</h3>
-        <button id="close-legal-btn" type="button" class="w-8 h-8 rounded-full bg-atelier-blush hover:bg-atelier-berry text-ink hover:text-white flex items-center justify-center font-bold transition">✕</button>
-      </div>
-      <div id="legal-modal-body" class="overflow-y-auto py-4 text-xs sm:text-sm text-ink-muted space-y-3 leading-relaxed"></div>
     </div>
   </div>
 
@@ -1256,793 +1294,6 @@
   <!-- =========================================================
        JAVASCRIPT: DATOS DINÁMICOS (CMS), CATÁLOGO Y CONFIGURADOR
   ========================================================== -->
-  <script>
-    // Iconos SVG botánicos a medida (Cero emojis)
-    const BOTANICAL_SVGS = {
-      bouquet: `<svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3c2.5 0 4.5 2 4.5 4.5 0 1.8-1 3.3-2.5 4l-2 9.5-2-9.5C8.5 10.8 7.5 9.3 7.5 7.5 7.5 5 9.5 3 12 3z"/><path stroke-linecap="round" stroke-linejoin="round" d="M8 14h8M9 17.5l6-1"/></svg>`,
-      boutonniere: `<svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21V9m0 0C12 5.5 15 3 18 3c0 3.5-2.5 6-6 6zm0 3c0-3.5-3-6-6-6 0 3.5 2.5 6 6 6z"/></svg>`,
-      dome: `<svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 19h14M6 19v-7a6 6 0 1112 0v7M12 9v10m0-7c1.8-1.5 3-1 3 0s-1.2 1.5-3 0z"/></svg>`,
-      headpiece: `<svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16c1.5-5 4.5-8 8-8s6.5 3 8 8M7 16v3m3.3-3.5v3.5m3.4-3.5v3.5M17 16v3"/><circle cx="12" cy="8" r="2"/></svg>`,
-      bracelet: `<svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path stroke-linecap="round" stroke-linejoin="round" d="M12 3a2 2 0 100 4 2 2 0 000-4zM9 5.5a1.5 1.5 0 100 3 1.5 1.5 0 000-3zM15 5.5a1.5 1.5 0 100 3 1.5 1.5 0 000-3z"/></svg>`,
-      car: `<svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 17h14v-5l-2-5H7L5 12v5zm2 0a2 2 0 11-4 0m18 0a2 2 0 11-4 0M9 7c1.5-2 4.5-2 6 0"/></svg>`
-    };
-
-    let SITE_DATA = {
-      contacto: {
-        telefono: "643 92 25 47",
-        whatsapp: "34643922547",
-        direccion: "Calle Blasco de Garay, 12",
-        horario_lv: "L–J: 10:00–13:30 y 17:30–19:30",
-        "horario_sab": "Viernes: 10:00–14:00 · (Verano L–V: 9–14h)"
-      },
-      campana: {
-        activa: true,
-        tema: "san_valentin",
-        etiqueta: "Edición Limitada · Encargos Abiertos",
-        titulo: "Especial San Valentín: Flores que no se marchitan",
-        subtitulo: "Sorprende con rosas eternas y composiciones preservadas hechas a mano en nuestro taller de Albacete. Recogida en tienda o envío a domicilio.",
-        fecha_limite: "Encargos garantizados hasta el 12 de febrero o agotar existencias",
-        ofertas: [
-          {
-            nombre: "Cúpula 'Amor Eterno' con Rosa Preservada",
-            descripcion: "Cúpula de cristal con base de madera natural, rosa eterna roja o rosa empolvado y cama de hortensias y paniculata.",
-            precio: "49 €",
-            precio_antes: "58 €",
-            tag: "El más vendido",
-            imagen: "https://images.unsplash.com/photo-1508615039623-a25605d2b022?auto=format&fit=crop&w=900&q=80"
-          },
-          {
-            nombre: "Ramo 'Suspiro' de Rosas y Eucalipto",
-            descripcion: "Ramo artesanal de flores 100% preservadas envuelto en papel kraft de atelier y lazo de terciopelo.",
-            precio: "39 €",
-            precio_antes: "45 €",
-            tag: "Unidades limitadas",
-            imagen: "https://images.unsplash.com/photo-1526047932273-341f2a7631f9?auto=format&fit=crop&w=900&q=80"
-          },
-          {
-            nombre: "Caja Sombrerera Mini Atelier",
-            descripcion: "Arreglo floral preservado en caja rígida decorativa lista para colocar en cualquier rincón especial.",
-            precio: "32 €",
-            precio_antes: "",
-            tag: "Detalle Ideal",
-            imagen: "https://images.unsplash.com/photo-1561181286-d3fee7d55364?auto=format&fit=crop&w=900&q=80"
-          }
-        ]
-      },
-      pack_items: [
-        {
-          id: "ramo",
-          nombre: "Ramo de Novia Preservado",
-          descripcion: "Diseño exclusivo a medida",
-          precio: 95,
-          svg: "bouquet",
-          cantidad_inicial: 1,
-          bg_active: "bg-atelier-blush border-atelier-berry",
-          icon_bg: "bg-atelier-berry text-white"
-        },
-        {
-          id: "prendido",
-          nombre: "Prendido de Solapa (Ud.)",
-          descripcion: "Para novio, padrino o testigos",
-          precio: 12,
-          svg: "boutonniere",
-          cantidad_inicial: 2,
-          bg_active: "bg-atelier-sage border-atelier-eucalyptus",
-          icon_bg: "bg-atelier-eucalyptus text-white"
-        },
-        {
-          id: "replica",
-          nombre: "Réplica o Cúpula Cristal",
-          descripcion: "Detalle eterno para madres/abuelas",
-          precio: 55,
-          svg: "dome",
-          cantidad_inicial: 0,
-          bg_active: "bg-atelier-amber border-atelier-gold",
-          icon_bg: "bg-atelier-gold text-white"
-        },
-        {
-          id: "tocado",
-          nombre: "Tocado / Peineta Floral",
-          descripcion: "Artesanal a juego con tu ramo",
-          precio: 38,
-          svg: "headpiece",
-          cantidad_inicial: 0,
-          bg_active: "bg-atelier-lavender border-atelier-plum",
-          icon_bg: "bg-atelier-plum text-white"
-        },
-        {
-          id: "pulsera",
-          nombre: "Pulsera Dama de Honor",
-          descripcion: "Corsage floral para amigas",
-          precio: 15,
-          svg: "bracelet",
-          cantidad_inicial: 0,
-          bg_active: "bg-atelier-blush border-atelier-rose",
-          icon_bg: "bg-atelier-rose text-white"
-        },
-        {
-          id: "coche",
-          nombre: "Decoración Coche Nupcial",
-          descripcion: "Guirnalda y prendidos para manetas",
-          precio: 65,
-          svg: "car",
-          cantidad_inicial: 0,
-          bg_active: "bg-atelier-sky border-atelier-skyDeep",
-          icon_bg: "bg-atelier-skyDeep text-white"
-        }
-      ],
-      galeria: [
-        {
-          titulo: "Ramo Nupcial Silvestre & Rosa Empolvado",
-          categoria: "novias",
-          etiqueta: "Trabajo Real Morela",
-          badgeColor: "bg-atelier-berry text-white",
-          precio: "Desde 95 €",
-          descripcion: "Ramo de novia elaborado artesanalmente en nuestro taller de Albacete con flores preservadas y secas seleccionadas pétalo a pétalo.",
-          imagen: "https://cdn0.bodas.net/vendor/32554/3_2/960/jpg/aa4a0642_1_232554-170566167623101.jpeg"
-        },
-        {
-          titulo: "Composición Nupcial en Tonos Blancos y Salvia",
-          categoria: "novias",
-          etiqueta: "Trabajo Real Morela",
-          badgeColor: "bg-atelier-eucalyptus text-white",
-          precio: "Desde 95 €",
-          descripcion: "Diseño nupcial real de Morela Arte Floral combinando eucalipto preservado, rosas blancas, hortensia y paniculata con empuñadura de terciopelo.",
-          imagen: "https://cdn0.bodas.net/vendor/32554/3_2/960/jpg/img-20250115-wa0005_1_232554-173748012629034.jpeg"
-        },
-        {
-          titulo: "Ramo Boho Chic en Tonos Tierra y Burdeos",
-          categoria: "novias",
-          etiqueta: "Atelier Novias",
-          badgeColor: "bg-atelier-berry text-white",
-          precio: "Desde 105 €",
-          descripcion: "Combinación con carácter de rosas preservadas, espigas doradas, broom y follaje otoñal. Ideal para bodas de otoño e invierno.",
-          imagen: "https://images.unsplash.com/photo-1526047932273-341f2a7631f9?auto=format&fit=crop&w=900&q=80"
-        },
-        {
-          titulo: "Cúpula de Cristal 'La Bella y la Bestia'",
-          categoria: "cupulas",
-          etiqueta: "Cúpulas & Regalos",
-          badgeColor: "bg-atelier-gold text-white",
-          precio: "Desde 45 €",
-          descripcion: "Cúpula de cristal con base de madera natural, rosa eterna principal y composición botánica a los pies. El regalo estrella para madres y abuelas.",
-          imagen: "https://images.unsplash.com/photo-1508615039623-a25605d2b022?auto=format&fit=crop&w=900&q=80"
-        },
-        {
-          titulo: "Pareja de Réplicas en Miniatura para Madres",
-          categoria: "cupulas",
-          etiqueta: "Detalle Emotivo",
-          badgeColor: "bg-atelier-rose text-white",
-          precio: "Desde 55 € / ud.",
-          descripcion: "Reproducimos tu ramo de novia en tamaño compacto con las mismas flores y cinta para que sorprendas a las madres o a tu mejor amiga en el banquete.",
-          imagen: "https://images.unsplash.com/photo-1561181286-d3fee7d55364?auto=format&fit=crop&w=900&q=80"
-        },
-        {
-          titulo: "Peineta y Horquillas Florales de Novia",
-          categoria: "tocados",
-          etiqueta: "Tocados a Medida",
-          badgeColor: "bg-atelier-plum text-white",
-          precio: "Desde 38 €",
-          descripcion: "Tocado alambrado a mano flor a flor en nuestro taller, diseñado exactamente con los mismos tonos de tu ramo y adaptado a tu recogido o trenza.",
-          imagen: "https://images.unsplash.com/photo-1522673607200-164d1b6ce486?auto=format&fit=crop&w=900&q=80"
-        },
-        {
-          titulo: "Corona y Diadema de Primera Comunión",
-          categoria: "tocados",
-          etiqueta: "Especial Comuniones",
-          badgeColor: "bg-atelier-plum text-white",
-          precio: "Desde 35 €",
-          descripcion: "Semicoronas, diademas y apliques para cinturón de Comunión o niñas de arras en tonos empolvados, beige, lavanda o blanco roto.",
-          imagen: "https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=900&q=80"
-        },
-        {
-          titulo: "Prendidos de Solapa Coordinados",
-          categoria: "detalles",
-          etiqueta: "Novio & Padrino",
-          badgeColor: "bg-atelier-eucalyptus text-white",
-          precio: "12 € / ud.",
-          descripcion: "Boutonnieres artesanales para el novio, padrino y testigos elaborados con las mismas flores preservadas del ramo nupcial.",
-          imagen: "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=900&q=80"
-        },
-        {
-          titulo: "Pulseras de Damas & Decoración de Coche",
-          categoria: "detalles",
-          etiqueta: "Complementos Boda",
-          badgeColor: "bg-atelier-skyDeep text-white",
-          precio: "Desde 15 €",
-          descripcion: "Corsages con lazo de seda para damas de honor y prendidos florales para las manetas y bandeja trasera del coche nupcial.",
-          imagen: "https://images.unsplash.com/photo-1469371670807-013ccf25f16a?auto=format&fit=crop&w=900&q=80"
-        }
-      ]
-    };
-
-    // Paletas visuales y temas dinámicos para Campañas Especiales
-    const THEMES_CONFIG = {
-      san_valentin: {
-        sectionBg: "bg-gradient-to-b from-atelier-blush/60 via-atelier-cream to-atelier-blush/30",
-        glow1: "bg-atelier-rose/25",
-        glow2: "bg-atelier-berry/20",
-        badge: "bg-atelier-berry text-white shadow-sm",
-        badgeIcon: `<svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>`,
-        noticeBg: "bg-atelier-blush text-atelier-berry border border-atelier-blushMid",
-        cardBorder: "border-atelier-blushMid hover:border-atelier-rose",
-        cardTag: "bg-atelier-berry text-white",
-        cardBtn: "bg-atelier-berry hover:bg-atelier-rose text-white",
-        footerBg: "bg-white/90 border-atelier-blushMid",
-        footerIconBox: "bg-atelier-blush text-atelier-berry",
-        footerCta: "bg-atelier-berry hover:bg-ink text-white"
-      },
-      dia_madre: {
-        sectionBg: "bg-gradient-to-b from-atelier-lavender/60 via-atelier-cream to-atelier-blush/40",
-        glow1: "bg-atelier-plum/20",
-        glow2: "bg-atelier-rose/25",
-        badge: "bg-atelier-plum text-white shadow-sm",
-        badgeIcon: `<svg class="w-3.5 h-3.5 fill-none stroke-current" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9 9 0 01-9-9c0-4.97 4.03-9 9-9s9 4.03 9 9a9 9 0 01-9 9z"/><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3"/></svg>`,
-        noticeBg: "bg-atelier-lavender text-atelier-plum border border-atelier-lavenderMid",
-        cardBorder: "border-atelier-lavenderMid hover:border-atelier-plum",
-        cardTag: "bg-atelier-plum text-white",
-        cardBtn: "bg-atelier-plum hover:bg-atelier-berry text-white",
-        footerBg: "bg-white/90 border-atelier-lavenderMid",
-        footerIconBox: "bg-atelier-lavender text-atelier-plum",
-        footerCta: "bg-atelier-plum hover:bg-ink text-white"
-      },
-      comuniones: {
-        sectionBg: "bg-gradient-to-b from-atelier-amber/50 via-atelier-cream to-atelier-sand",
-        glow1: "bg-atelier-gold/20",
-        glow2: "bg-atelier-sage/30",
-        badge: "bg-atelier-gold text-white shadow-sm",
-        badgeIcon: `<svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>`,
-        noticeBg: "bg-atelier-amber text-atelier-gold border border-atelier-amberMid",
-        cardBorder: "border-atelier-amberMid hover:border-atelier-gold",
-        cardTag: "bg-atelier-gold text-white",
-        cardBtn: "bg-atelier-gold hover:bg-amber-600 text-white",
-        footerBg: "bg-white/90 border-atelier-amberMid",
-        footerIconBox: "bg-atelier-amber text-atelier-gold",
-        footerCta: "bg-atelier-gold hover:bg-ink text-white"
-      },
-      navidad: {
-        sectionBg: "bg-gradient-to-b from-atelier-forest/15 via-atelier-cream to-atelier-berry/15",
-        glow1: "bg-atelier-forest/20",
-        glow2: "bg-atelier-gold/25",
-        badge: "bg-atelier-forest text-white shadow-sm",
-        badgeIcon: `<svg class="w-3.5 h-3.5 fill-none stroke-current" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 2L9 7h6l-3-5zM7 7L4 13h16l-3-6H7zM5 13l-3 7h20l-3-7H5zM11 20v2h2v-2h-2z"/></svg>`,
-        noticeBg: "bg-atelier-sage text-atelier-forest border border-atelier-sageMid",
-        cardBorder: "border-atelier-sageMid hover:border-atelier-forest",
-        cardTag: "bg-atelier-berry text-white",
-        cardBtn: "bg-atelier-forest hover:bg-atelier-berry text-white",
-        footerBg: "bg-white/90 border-atelier-sageMid",
-        footerIconBox: "bg-atelier-sage text-atelier-forest",
-        footerCta: "bg-atelier-forest hover:bg-ink text-white"
-      }
-    };
-
-    function renderCampana() {
-      const campana = SITE_DATA.campana;
-      const section = document.getElementById('campana-especial');
-      const navLink = document.getElementById('nav-campana-link');
-      const mobileNavLink = document.getElementById('mobile-nav-campana-link');
-
-      if (!section) return;
-
-      if (!campana || !campana.activa || campana.activa === 'false') {
-        section.classList.add('hidden');
-        if (navLink) navLink.classList.add('hidden');
-        if (mobileNavLink) mobileNavLink.classList.add('hidden');
-        return;
-      }
-
-      section.classList.remove('hidden');
-      if (navLink) navLink.classList.remove('hidden');
-      if (mobileNavLink) mobileNavLink.classList.remove('hidden');
-
-      const themeKey = campana.tema || 'san_valentin';
-      const theme = THEMES_CONFIG[themeKey] || THEMES_CONFIG.san_valentin;
-
-      section.className = `relative py-16 sm:py-24 overflow-hidden scroll-mt-16 transition-colors duration-500 ${theme.sectionBg}`;
-
-      const glow1 = document.getElementById('campana-bg-glow-1');
-      const glow2 = document.getElementById('campana-bg-glow-2');
-      if (glow1) glow1.className = `absolute top-12 left-0 w-96 h-96 rounded-full blur-3xl -z-10 pointer-events-none opacity-60 ${theme.glow1}`;
-      if (glow2) glow2.className = `absolute bottom-12 right-0 w-96 h-96 rounded-full blur-3xl -z-10 pointer-events-none opacity-60 ${theme.glow2}`;
-
-      const badge = document.getElementById('campana-badge');
-      if (badge) badge.className = `inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest mb-4 shadow-sm ${theme.badge}`;
-
-      const badgeIcon = document.getElementById('campana-badge-icon');
-      if (badgeIcon) badgeIcon.innerHTML = theme.badgeIcon;
-
-      const etiqueta = document.getElementById('campana-etiqueta');
-      if (etiqueta) etiqueta.textContent = campana.etiqueta || 'Campaña Especial';
-
-      const titulo = document.getElementById('campana-titulo');
-      if (titulo) titulo.innerHTML = campana.titulo || '';
-
-      const subtitulo = document.getElementById('campana-subtitulo');
-      if (subtitulo) subtitulo.textContent = campana.subtitulo || '';
-
-      const fechaWrapper = document.getElementById('campana-fecha-wrapper');
-      if (fechaWrapper) {
-        if (campana.fecha_limite) {
-          fechaWrapper.className = `mt-5 inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold shadow-sm ${theme.noticeBg}`;
-          const fechaText = document.getElementById('campana-fecha-limite');
-          if (fechaText) fechaText.textContent = campana.fecha_limite;
-          fechaWrapper.style.display = 'inline-flex';
-        } else {
-          fechaWrapper.style.display = 'none';
-        }
-      }
-
-      const footerBanner = document.getElementById('campana-footer-banner');
-      if (footerBanner) footerBanner.className = `mt-12 rounded-3xl p-6 sm:p-8 border shadow-sm flex flex-col md:flex-row items-center justify-between gap-6 reveal ${theme.footerBg}`;
-
-      const footerIconBox = document.getElementById('campana-footer-icon-box');
-      if (footerIconBox) footerIconBox.className = `w-12 h-12 rounded-2xl flex items-center justify-center shrink-0 ${theme.footerIconBox}`;
-
-      const footerCta = document.getElementById('campana-footer-cta');
-      if (footerCta) {
-        footerCta.className = `w-full md:w-auto text-center shrink-0 px-6 py-3.5 rounded-full font-semibold text-xs sm:text-sm transition-all shadow-md ${theme.footerCta}`;
-        footerCta.href = `https://wa.me/${SITE_DATA.contacto.whatsapp}?text=` + encodeURIComponent(`Hola Morela Arte Floral, he visto la campaña "${campana.titulo}" y me gustaría consultar disponibilidad para un encargo personalizado.`);
-      }
-
-      const grid = document.getElementById('campana-ofertas-grid');
-      if (grid && campana.ofertas) {
-        grid.innerHTML = campana.ofertas.map(oferta => `
-          <article class="bg-white rounded-3xl overflow-hidden border ${theme.cardBorder} shadow-sm hover:shadow-editorial transition-all duration-300 flex flex-col justify-between group w-[82vw] max-w-[320px] sm:w-auto shrink-0 snap-center sm:snap-align-none">
-            <div class="relative h-56 sm:h-72 overflow-hidden bg-atelier-sand">
-              <img 
-                src="${oferta.imagen}" 
-                alt="${oferta.nombre}" 
-                loading="lazy"
-                onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1508615039623-a25605d2b022?auto=format&fit=crop&w=900&q=80';"
-                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-              />
-              ${oferta.tag ? `
-                <span class="absolute top-3.5 left-3.5 ${theme.cardTag} text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full shadow-sm">
-                  ${oferta.tag}
-                </span>
-              ` : ''}
-              <div class="absolute top-3.5 right-3.5 bg-white/95 backdrop-blur-md px-3 py-1 rounded-full shadow-sm flex items-center gap-1.5">
-                ${oferta.precio_antes ? `<span class="text-[11px] line-through text-ink-soft">${oferta.precio_antes}</span>` : ''}
-                <span class="text-ink text-xs sm:text-sm font-bold">${oferta.precio}</span>
-              </div>
-            </div>
-
-            <div class="p-5 sm:p-6 flex-1 flex flex-col justify-between space-y-4">
-              <div>
-                <h3 class="font-serif text-xl sm:text-2xl font-bold text-ink leading-snug group-hover:text-atelier-berry transition-colors">
-                  ${oferta.nombre}
-                </h3>
-                <p class="text-xs sm:text-sm text-ink-muted mt-2 line-clamp-3 leading-relaxed">
-                  ${oferta.descripcion}
-                </p>
-              </div>
-
-              <div class="pt-3 border-t border-atelier-sand flex items-center justify-between gap-3">
-                <div class="flex flex-col">
-                  <span class="text-[10px] uppercase tracking-wider text-ink-soft">Precio Taller</span>
-                  <div class="flex items-baseline gap-1.5">
-                    ${oferta.precio_antes ? `<span class="text-xs line-through text-ink-muted">${oferta.precio_antes}</span>` : ''}
-                    <span class="text-base sm:text-lg font-bold text-atelier-berry">${oferta.precio}</span>
-                  </div>
-                </div>
-                <a href="https://wa.me/${SITE_DATA.contacto.whatsapp}?text=${encodeURIComponent('Hola Morela Arte Floral, me interesa encargar la pieza de campaña "' + oferta.nombre + '" (' + oferta.precio + '). ¿Tenéis disponibilidad?')}"
-                   target="_blank" rel="noopener noreferrer"
-                   class="${theme.cardBtn} px-4 py-2.5 rounded-full text-xs font-semibold inline-flex items-center gap-1.5 transition-all shadow-sm shrink-0">
-                  <span>Encargar</span>
-                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
-                </a>
-              </div>
-            </div>
-          </article>
-        `).join('');
-      }
-    }
-
-    document.addEventListener('DOMContentLoaded', async () => {
-      // 0. Cargar datos dinámicos desde data.json si está disponible
-      try {
-        let response = null;
-        try {
-          response = await fetch('./data.json', { cache: 'no-store' });
-        } catch (_) {
-          response = await fetch('/data.json', { cache: 'no-store' });
-        }
-        if (response && response.ok) {
-          const remoteData = await response.json();
-          if (remoteData.contacto) SITE_DATA.contacto = { ...SITE_DATA.contacto, ...remoteData.contacto };
-          if (remoteData.campana) SITE_DATA.campana = { ...SITE_DATA.campana, ...remoteData.campana };
-          if (remoteData.pack_items && Array.isArray(remoteData.pack_items) && remoteData.pack_items.length) {
-            SITE_DATA.pack_items = remoteData.pack_items;
-          }
-          if (remoteData.galeria && Array.isArray(remoteData.galeria) && remoteData.galeria.length) {
-            SITE_DATA.galeria = remoteData.galeria;
-          }
-        }
-      } catch (err) {
-        console.info('Cargando con configuración estática base (data.json offline/local):', err);
-      }
-
-      // 1. Renderizar Campaña Especial Dinámica
-      renderCampana();
-
-      // Estado interactivo del configurador
-      const quantities = {};
-      SITE_DATA.pack_items.forEach(item => {
-        quantities[item.id] = parseInt(item.cantidad_inicial, 10) || 0;
-      });
-      let selectedPalette = "Empolvados & Rosa Blush";
-
-      // 2. Inicializar datos de contacto y enlaces dinámicos
-      if (SITE_DATA.contacto) {
-        const addrEl = document.getElementById('contact-address');
-        if (addrEl && SITE_DATA.contacto.direccion) addrEl.textContent = SITE_DATA.contacto.direccion;
-        const hlEl = document.getElementById('contact-hours-lv');
-        if (hlEl && SITE_DATA.contacto.horario_lv) hlEl.textContent = SITE_DATA.contacto.horario_lv;
-        const hsEl = document.getElementById('contact-hours-sab');
-        if (hsEl && SITE_DATA.contacto.horario_sab) hsEl.textContent = SITE_DATA.contacto.horario_sab;
-        const ptEl = document.getElementById('contact-phone-text');
-        if (ptEl && SITE_DATA.contacto.telefono) ptEl.textContent = SITE_DATA.contacto.telefono;
-        const plEl = document.getElementById('contact-phone-link');
-        if (plEl && SITE_DATA.contacto.telefono) plEl.href = 'tel:+34' + SITE_DATA.contacto.telefono.replace(/\s+/g, '');
-        const floatWa = document.querySelector('a[aria-label="Contactar por WhatsApp"]');
-        if (floatWa && SITE_DATA.contacto.whatsapp) {
-          floatWa.href = `https://wa.me/${SITE_DATA.contacto.whatsapp}?text=` + encodeURIComponent('Hola Morela Arte Floral, quería información sobre vuestras flores preservadas en Albacete');
-        }
-        const inspoWa = document.getElementById('custom-inspo-wa');
-        if (inspoWa && SITE_DATA.contacto.whatsapp) {
-          inspoWa.href = `https://wa.me/${SITE_DATA.contacto.whatsapp}?text=` + encodeURIComponent('Hola Morela Arte Floral, tengo una idea de ramo o arreglo y me gustaría enseñaros fotos de inspiración');
-        }
-        const fAddr = document.getElementById('footer-contact-address');
-        if (fAddr && SITE_DATA.contacto.direccion) fAddr.textContent = SITE_DATA.contacto.direccion;
-        const fPhone = document.getElementById('footer-contact-phone');
-        if (fPhone && SITE_DATA.contacto.telefono) fPhone.textContent = SITE_DATA.contacto.telefono;
-      }
-
-      // Actualizar contador del filtro "Todo el Catálogo"
-      const allFilterBtn = document.querySelector('.gallery-filter-btn[data-filter="all"]');
-      if (allFilterBtn && SITE_DATA.galeria) {
-        allFilterBtn.textContent = `Todo el Catálogo (${SITE_DATA.galeria.length})`;
-      }
-
-      // 2. Renderizar Galería & Catálogo con Lightbox
-      const lookbookGrid = document.getElementById('lookbook-grid');
-      const lightboxModal = document.getElementById('lightbox-modal');
-
-      function renderGallery(filter = 'all') {
-        const filtered = SITE_DATA.galeria.filter(item => filter === 'all' || item.categoria === filter);
-        lookbookGrid.innerHTML = filtered.map((item, idx) => `
-          <article data-idx="${idx}" data-category="${item.categoria}" class="gallery-card animate-fade-in group cursor-pointer bg-white rounded-2xl sm:rounded-3xl overflow-hidden border border-atelier-blushMid/80 shadow-sm hover:shadow-editorial transition-all duration-500 flex flex-col justify-between">
-            <div class="relative h-40 sm:h-72 overflow-hidden bg-atelier-sand">
-              <img 
-                src="${item.imagen}" 
-                alt="${item.titulo}" 
-                loading="lazy"
-                onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1526047932273-341f2a7631f9?auto=format&fit=crop&w=900&q=80';"
-                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-              />
-              <span class="absolute top-2.5 left-2.5 sm:top-3.5 sm:left-3.5 ${item.badgeColor} text-[9px] sm:text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 sm:px-3 sm:py-1 rounded-full shadow-sm">
-                ${item.etiqueta}
-              </span>
-              <span class="absolute top-2.5 right-2.5 sm:top-3.5 sm:right-3.5 bg-white/95 backdrop-blur-md text-ink text-[11px] sm:text-xs font-bold px-2 py-0.5 sm:px-3 sm:py-1 rounded-full shadow-sm">
-                ${item.precio}
-              </span>
-            </div>
-            <div class="p-3 sm:p-6 flex-1 flex flex-col justify-between space-y-2 sm:space-y-4">
-              <div>
-                <h3 class="font-serif text-sm sm:text-2xl font-bold text-ink group-hover:text-atelier-berry transition-colors leading-snug line-clamp-2">
-                  ${item.titulo}
-                </h3>
-                <p class="hidden sm:block text-xs sm:text-sm text-ink-muted mt-1.5 line-clamp-2 leading-relaxed">
-                  ${item.descripcion}
-                </p>
-              </div>
-              <div class="pt-2 border-t border-atelier-sand flex items-center justify-between text-[11px] sm:text-xs font-bold text-atelier-berry">
-                <span class="truncate">Ver detalles</span>
-                <span class="w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-atelier-blush group-hover:bg-atelier-berry group-hover:text-white flex items-center justify-center transition-colors shrink-0 text-xs">＋</span>
-              </div>
-            </div>
-          </article>
-        `).join('');
-
-        // Eventos Lightbox
-        document.querySelectorAll('.gallery-card').forEach((card, i) => {
-          card.addEventListener('click', () => {
-            const item = filtered[i];
-            document.getElementById('lightbox-img').src = item.imagen;
-            document.getElementById('lightbox-badge').textContent = item.etiqueta;
-            document.getElementById('lightbox-title').textContent = item.titulo;
-            document.getElementById('lightbox-price').textContent = item.precio;
-            document.getElementById('lightbox-desc').textContent = item.descripcion;
-            const waMsg = `Hola Morela Arte Floral, he visto en vuestro catálogo la pieza "${item.titulo}" (${item.precio}) y me gustaría consultaros detalles.`;
-            document.getElementById('lightbox-wa-link').href = `https://wa.me/${SITE_DATA.contacto.whatsapp}?text=` + encodeURIComponent(waMsg);
-            lightboxModal.classList.remove('hidden');
-            lightboxModal.classList.add('flex');
-          });
-        });
-      }
-
-      renderGallery('all');
-
-      // Filtros de la galería
-      const filterBtns = document.querySelectorAll('.gallery-filter-btn');
-      filterBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-          const filter = btn.getAttribute('data-filter');
-          filterBtns.forEach(b => {
-            b.className = 'gallery-filter-btn bg-white hover:bg-atelier-blush text-ink border border-atelier-blushMid text-xs sm:text-sm font-semibold px-4 sm:px-5 py-2.5 rounded-full transition-all shrink-0';
-          });
-          btn.className = 'gallery-filter-btn bg-atelier-berry text-white text-xs sm:text-sm font-semibold px-4 sm:px-5 py-2.5 rounded-full transition-all shrink-0 shadow-sm';
-          renderGallery(filter);
-        });
-      });
-
-      // Cerrar Lightbox
-      const closeLightbox = () => {
-        lightboxModal.classList.add('hidden');
-        lightboxModal.classList.remove('flex');
-      };
-      document.getElementById('close-lightbox-btn').addEventListener('click', closeLightbox);
-      document.getElementById('lightbox-to-pack').addEventListener('click', closeLightbox);
-      lightboxModal.addEventListener('click', e => {
-        if (e.target === lightboxModal) closeLightbox();
-      });
-
-      // 3. Configurador Interactivo de Pack con Cantidades (+/-)
-      const packContainer = document.getElementById('pack-items-container');
-      const selectedList = document.getElementById('selected-items-list');
-      const estimatedTotalEl = document.getElementById('estimated-total');
-      const shippingBadge = document.getElementById('shipping-badge');
-      const shippingProgressText = document.getElementById('shipping-progress-text');
-      const shippingProgressPct = document.getElementById('shipping-progress-pct');
-      const shippingProgressBar = document.getElementById('shipping-progress-bar');
-
-      function renderPackConfigurator() {
-        packContainer.innerHTML = SITE_DATA.pack_items.map(item => {
-          const qty = quantities[item.id] || 0;
-          const isSelected = qty > 0;
-          const cardClasses = isSelected
-            ? `pack-card is-selected ${item.bg_active} shadow-sm`
-            : `pack-card bg-atelier-cream/80 hover:bg-white border border-atelier-sand`;
-          const iconClasses = isSelected
-            ? item.icon_bg
-            : `bg-white text-ink-muted border border-atelier-sand`;
-
-          return `
-            <div class="${cardClasses} rounded-2xl p-3 sm:p-4 transition-all duration-200 flex flex-col justify-between gap-2.5 sm:gap-3">
-              <div class="flex items-center sm:items-start gap-2.5 sm:gap-3">
-                <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-xl ${iconClasses} flex items-center justify-center shrink-0 transition-colors">
-                  ${BOTANICAL_SVGS[item.svg] || BOTANICAL_SVGS.bouquet}
-                </div>
-                <div class="flex-1 min-w-0">
-                  <h4 class="font-bold text-xs sm:text-sm text-ink truncate">${item.nombre}</h4>
-                  <p class="hidden sm:block text-[11px] text-ink-muted leading-snug mt-0.5">${item.descripcion}</p>
-                  <span class="inline-block mt-0.5 sm:mt-1.5 text-xs font-bold text-atelier-berry">${item.precio} € / ud.</span>
-                </div>
-                <!-- Contador +/- ergonómico en móvil en la misma fila -->
-                <div class="flex sm:hidden items-center gap-1.5 bg-white rounded-full px-1.5 py-1 border border-atelier-sand shadow-sm shrink-0">
-                  <button type="button" data-action="dec" data-id="${item.id}" aria-label="Restar unidad" class="w-6 h-6 rounded-full hover:bg-atelier-blush text-ink font-bold text-sm flex items-center justify-center transition">−</button>
-                  <span class="w-4 text-center text-xs font-bold text-ink">${qty}</span>
-                  <button type="button" data-action="inc" data-id="${item.id}" aria-label="Sumar unidad" class="w-6 h-6 rounded-full bg-ink hover:bg-atelier-berry text-white font-bold text-sm flex items-center justify-center transition">+</button>
-                </div>
-              </div>
-
-              <!-- En escritorio/tablet mostramos la barra inferior completa con subtotal -->
-              <div class="hidden sm:flex items-center justify-between pt-2 border-t border-ink/5">
-                <span class="text-[11px] font-semibold ${isSelected ? 'text-ink' : 'text-ink-soft'}">
-                  ${isSelected ? `Subtotal: ${qty * item.precio} €` : 'Sin añadir'}
-                </span>
-                <div class="flex items-center gap-2 bg-white rounded-full px-1.5 py-1 border border-atelier-sand shadow-sm">
-                  <button type="button" data-action="dec" data-id="${item.id}" aria-label="Restar unidad" class="w-6 h-6 rounded-full hover:bg-atelier-blush text-ink font-bold text-sm flex items-center justify-center transition">−</button>
-                  <span class="w-5 text-center text-xs font-bold text-ink">${qty}</span>
-                  <button type="button" data-action="inc" data-id="${item.id}" aria-label="Sumar unidad" class="w-6 h-6 rounded-full bg-ink hover:bg-atelier-berry text-white font-bold text-sm flex items-center justify-center transition">+</button>
-                </div>
-              </div>
-            </div>
-          `;
-        }).join('');
-
-        // Eventos botones +/-
-        packContainer.querySelectorAll('button[data-action]').forEach(btn => {
-          btn.addEventListener('click', () => {
-            const id = btn.getAttribute('data-id');
-            const action = btn.getAttribute('data-action');
-            if (action === 'inc') {
-              quantities[id] = Math.min(20, (quantities[id] || 0) + 1);
-            } else {
-              quantities[id] = Math.max(0, (quantities[id] || 0) - 1);
-            }
-            renderPackConfigurator();
-            updatePackSummary();
-          });
-        });
-      }
-
-      function updatePackSummary() {
-        let total = 0;
-        const rows = [];
-
-        SITE_DATA.pack_items.forEach(item => {
-          const qty = quantities[item.id] || 0;
-          if (qty > 0) {
-            const subtotal = qty * Number(item.precio);
-            total += subtotal;
-            rows.push(`
-              <li class="flex items-center justify-between bg-white/90 px-3.5 py-2.5 rounded-xl border border-atelier-sand animate-fade-in">
-                <div class="flex items-center gap-2 min-w-0 pr-2">
-                  <span class="w-5 h-5 rounded-full bg-atelier-blush text-atelier-berry font-bold text-[11px] flex items-center justify-center shrink-0">${qty}x</span>
-                  <span class="font-semibold text-xs text-ink truncate">${item.nombre}</span>
-                </div>
-                <span class="text-xs font-bold text-ink shrink-0">${subtotal} €</span>
-              </li>
-            `);
-          }
-        });
-
-        selectedList.innerHTML = rows.length > 0
-          ? rows.join('')
-          : `<li class="text-xs text-ink-muted italic bg-white/60 p-4 rounded-xl text-center">Usa los botones (+) para añadir piezas a tu propuesta floral.</li>`;
-
-        estimatedTotalEl.textContent = `${total} €`;
-
-        // Barra de envío gratis (umbral 89 €)
-        const freeShippingThreshold = 89;
-        const pct = Math.min(100, Math.round((total / freeShippingThreshold) * 100));
-        shippingProgressBar.style.width = `${pct}%`;
-        shippingProgressPct.textContent = `${pct}%`;
-
-        if (total >= freeShippingThreshold) {
-          shippingBadge.textContent = 'Envío Gratis (>89 €)';
-          shippingBadge.className = 'text-[11px] font-bold px-3 py-1.5 rounded-full bg-atelier-sage text-atelier-forest border border-atelier-sageMid shadow-sm';
-          shippingProgressText.textContent = '¡Tienes envío nacional gratuito incluido!';
-          shippingProgressText.className = 'text-atelier-forest';
-        } else if (total === 0) {
-          shippingBadge.textContent = 'Envío Península 3,99 €';
-          shippingBadge.className = 'text-[11px] font-bold px-3 py-1.5 rounded-full bg-white text-ink-muted border border-atelier-sand';
-          shippingProgressText.textContent = 'Envío nacional gratuito a partir de 89 €';
-          shippingProgressText.className = 'text-ink-muted';
-        } else {
-          const remaining = freeShippingThreshold - total;
-          shippingBadge.textContent = 'Envío Península 3,99 €';
-          shippingBadge.className = 'text-[11px] font-bold px-3 py-1.5 rounded-full bg-atelier-amber text-atelier-gold border border-atelier-amberMid';
-          shippingProgressText.textContent = `Te faltan ${remaining} € para tener envío gratis`;
-          shippingProgressText.className = 'text-atelier-gold';
-        }
-      }
-
-      renderPackConfigurator();
-      updatePackSummary();
-
-      // Selección de paleta de colores
-      const paletteBtns = document.querySelectorAll('.palette-btn');
-      const summaryPaletteEl = document.getElementById('summary-palette');
-      paletteBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-          selectedPalette = btn.getAttribute('data-palette');
-          summaryPaletteEl.textContent = selectedPalette;
-          paletteBtns.forEach(b => {
-            b.classList.remove('border-atelier-berry', 'bg-white', 'shadow-sm');
-            b.classList.add('border-transparent', 'bg-white/70');
-          });
-          btn.classList.add('border-atelier-berry', 'bg-white', 'shadow-sm');
-          btn.classList.remove('border-transparent', 'bg-white/70');
-        });
-      });
-
-      // Enviar Pack por WhatsApp
-      document.getElementById('send-pack-btn').addEventListener('click', () => {
-        const selectedLines = [];
-        let total = 0;
-        SITE_DATA.pack_items.forEach(item => {
-          const qty = quantities[item.id] || 0;
-          if (qty > 0) {
-            const itemTotal = qty * Number(item.precio);
-            selectedLines.push(`• ${qty}x ${item.nombre} (${itemTotal} €)`);
-            total += itemTotal;
-          }
-        });
-
-        const deliveryMode = document.querySelector('input[name="delivery-mode"]:checked')?.value || 'Taller en Albacete';
-        const itemsText = selectedLines.length > 0 ? selectedLines.join('\n') : '• Quiero asesoría personalizada desde cero';
-
-        const msg = `Hola Morela Arte Floral, he configurado esta propuesta en vuestra web:\n\n${itemsText}\n\nPaleta de color: ${selectedPalette}\nModalidad: ${deliveryMode}\nPresupuesto orientativo: desde ${total} €\n\n¿Podríamos ver disponibilidad para mi fecha?`;
-        window.open(`https://wa.me/${SITE_DATA.contacto.whatsapp}?text=` + encodeURIComponent(msg), '_blank');
-      });
-
-      // 4. Menú Móvil
-      const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-      const mobileMenu = document.getElementById('mobile-menu');
-      if (mobileMenuBtn) {
-        mobileMenuBtn.addEventListener('click', () => {
-          mobileMenu.classList.toggle('hidden');
-          document.getElementById('menu-icon-open').classList.toggle('hidden');
-          document.getElementById('menu-icon-close').classList.toggle('hidden');
-        });
-      }
-      document.querySelectorAll('.mobile-nav-link').forEach(link => {
-        link.addEventListener('click', () => {
-          mobileMenu.classList.add('hidden');
-          document.getElementById('menu-icon-open').classList.remove('hidden');
-          document.getElementById('menu-icon-close').classList.add('hidden');
-        });
-      });
-
-      // 5. Acordeón de Preguntas Frecuentes
-      document.querySelectorAll('.faq-btn').forEach(btn => {
-        btn.addEventListener('click', () => {
-          const content = btn.nextElementSibling;
-          const icon = btn.querySelector('.faq-icon');
-          const isOpen = !content.classList.contains('hidden');
-
-          document.querySelectorAll('.faq-content').forEach(c => c.classList.add('hidden'));
-          document.querySelectorAll('.faq-icon').forEach(i => i.textContent = '＋');
-
-          if (!isOpen) {
-            content.classList.remove('hidden');
-            icon.textContent = '−';
-          }
-        });
-      });
-
-      // 6. Modales Legales Completos
-      const legalTexts = {
-        aviso: {
-          title: "Aviso Legal",
-          body: `
-            <p><strong>Titularidad del sitio web:</strong> Morela Arte Floral, con taller y establecimiento comercial abierto al público en Calle Blasco de Garay, 12, 02003 Albacete (España) y teléfono de atención 643 92 25 47.</p>
-            <p><strong>Objeto:</strong> El presente sitio web tiene carácter informativo y de catálogo interactivo para la solicitud de presupuestos artesanales de flores preservadas, ramos de novia, tocados y arreglos para eventos.</p>
-            <p><strong>Propiedad Intelectual:</strong> Todas las fotografías de trabajos reales, diseños florales, logotipos y textos están protegidos por la normativa de propiedad intelectual e industrial.</p>
-          `
-        },
-        privacidad: {
-          title: "Política de Privacidad",
-          body: `
-            <p><strong>Responsable del tratamiento:</strong> Morela Arte Floral (Calle Blasco de Garay, 12, 02003 Albacete).</p>
-            <p><strong>Finalidad:</strong> Atender las consultas de presupuesto y disponibilidad enviadas voluntariamente por el usuario a través de WhatsApp o llamada telefónica.</p>
-            <p><strong>Legitimación y conservación:</strong> Consentimiento expreso del interesado al iniciar la consulta. No almacenamos bases de datos comerciales en este sitio web ni cedemos datos a terceros.</p>
-          `
-        },
-        cookies: {
-          title: "Política de Cookies",
-          body: `
-            <p>Este sitio web utiliza únicamente almacenamiento técnico local necesario para el funcionamiento del configurador de presupuestos y la visualización de la galería, sin instalar cookies publicitarias ni de rastreo de terceros.</p>
-          `
-        }
-      };
-
-      const legalModal = document.getElementById('legal-modal');
-      document.querySelectorAll('.open-legal-modal').forEach(btn => {
-        btn.addEventListener('click', () => {
-          const key = btn.getAttribute('data-legal');
-          const data = legalTexts[key] || legalTexts.aviso;
-          document.getElementById('legal-modal-title').textContent = data.title;
-          document.getElementById('legal-modal-body').innerHTML = data.body;
-          legalModal.classList.remove('hidden');
-          legalModal.classList.add('flex');
-        });
-      });
-
-      const closeLegal = () => {
-        legalModal.classList.add('hidden');
-        legalModal.classList.remove('flex');
-      };
-      document.getElementById('close-legal-btn').addEventListener('click', closeLegal);
-      legalModal.addEventListener('click', e => {
-        if (e.target === legalModal) closeLegal();
-      });
-
-      // 7. Animaciones Scroll Reveal
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('is-visible');
-          }
-        });
-      }, { threshold: 0.1 });
-      document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-      // Año actual automático
-      document.getElementById('current-year').textContent = new Date().getFullYear();
-    });
-  </script>
+  <script src="/assets/js/main.js" defer></script>
 </body>
 </html>

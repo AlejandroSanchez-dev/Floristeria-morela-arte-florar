@@ -1,0 +1,13 @@
+{
+  "name": "morela-arte-floral",
+  "private": true,
+  "scripts": {
+    "build": "tailwindcss -i ./src/input.css -o ./assets/css/styles.css --minify",
+    "watch": "tailwindcss -i ./src/input.css -o ./assets/css/styles.css --watch"
+  },
+  "devDependencies": {
+    "@fontsource/cormorant-garamond": "5.3.0",
+    "@fontsource/plus-jakarta-sans": "5.3.0",
+    "tailwindcss": "3.4.19"
+  }
+}

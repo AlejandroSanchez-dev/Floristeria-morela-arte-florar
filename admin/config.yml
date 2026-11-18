@@ -59,6 +59,22 @@ collections:
               - { label: "Título de la Campaña", name: "titulo", widget: "string" }
               - { label: "Texto / Subtítulo", name: "subtitulo", widget: "text" }
               - { label: "Aviso de Fecha Límite", name: "fecha_limite", widget: "string", required: false }
+              - label: "Mostrar desde (opcional)"
+                name: "fecha_inicio"
+                widget: "datetime"
+                required: false
+                format: "YYYY-MM-DD"
+                date_format: "DD/MM/YYYY"
+                time_format: false
+                hint: "Si la rellenas, la campaña no aparece antes de esta fecha aunque esté activada."
+              - label: "Ocultar automáticamente después de (opcional)"
+                name: "fecha_fin"
+                widget: "datetime"
+                required: false
+                format: "YYYY-MM-DD"
+                date_format: "DD/MM/YYYY"
+                time_format: false
+                hint: "Recomendado: el día siguiente a esta fecha la campaña desaparece sola, aunque se te olvide apagarla."
               - label: "Ofertas de Temporada (Precios y Textos)"
                 name: "ofertas"
                 widget: "list"
@@ -67,9 +83,18 @@ collections:
                   - { label: "Nombre de la Oferta", name: "nombre", widget: "string" }
                   - { label: "Descripción", name: "descripcion", widget: "text" }
                   - { label: "Precio Oferta (ej: 49 €)", name: "precio", widget: "string" }
-                  - { label: "Precio Anterior Tachado (opcional)", name: "precio_antes", widget: "string", required: false }
+                  - label: "Precio Anterior Tachado (opcional)"
+                    name: "precio_antes"
+                    widget: "string"
+                    required: false
+                    hint: "Por ley debe ser el precio MÁS BAJO que ha tenido este producto en los 30 días anteriores a la oferta. Si no es así, déjalo vacío."
                   - { label: "Etiqueta Destacada (ej: El más vendido)", name: "tag", widget: "string", required: false }
                   - { label: "Fotografía", name: "imagen", widget: "image" }
+                  - label: "¿Es una imagen de inspiración (no es un trabajo nuestro)?"
+                    name: "imagen_orientativa"
+                    widget: "boolean"
+                    default: false
+                    hint: "Actívalo si la foto es de internet o de un banco de imágenes. La web mostrará «Imagen orientativa» para no inducir a error."
 
           # ==========================================
           # 2. PRECIOS Y TEXTOS DE LA CALCULADORA NUPCIAL
@@ -84,7 +109,7 @@ collections:
               - { label: "ID (NO TOCAR)", name: "id", widget: "hidden" }
               - { label: "Nombre de la Pieza", name: "nombre", widget: "string" }
               - { label: "Descripción Breve", name: "descripcion", widget: "string" }
-              - { label: "Precio (€)", name: "precio", widget: "number", value_type: "int" }
+              - { label: "Precio (€, IVA incluido)", name: "precio", widget: "number", value_type: "int" }
               - { label: "Icono (NO TOCAR)", name: "svg", widget: "hidden" }
               - { label: "Cantidad Inicial (NO TOCAR)", name: "cantidad_inicial", widget: "hidden" }
               - { label: "Color Activo (NO TOCAR)", name: "bg_active", widget: "hidden" }
@@ -110,9 +135,14 @@ collections:
                   - { label: "Prendidos, Damas y Coche", value: "detalles" }
               - { label: "Etiqueta Superior", name: "etiqueta", widget: "string", default: "Trabajo Real Morela" }
               - { label: "Color de Etiqueta (NO TOCAR)", name: "badgeColor", widget: "hidden", default: "bg-atelier-berry text-white" }
-              - { label: "Precio Visible (ej: Desde 95 €)", name: "precio", widget: "string" }
+              - { label: "Precio Visible, IVA incluido (ej: Desde 95 €)", name: "precio", widget: "string" }
               - { label: "Descripción", name: "descripcion", widget: "text" }
               - { label: "Fotografía", name: "imagen", widget: "image" }
+              - label: "¿Es una imagen de inspiración (no es un trabajo nuestro)?"
+                name: "imagen_orientativa"
+                widget: "boolean"
+                default: false
+                hint: "Actívalo si la foto no es de una pieza hecha en el taller. Lo ideal es ir sustituyéndolas por fotos propias."
 
           # ==========================================
           # 4. TEXTOS DE CONTACTO Y HORARIOS
@@ -127,3 +157,56 @@ collections:
               - { label: "Dirección del Taller", name: "direccion", widget: "string" }
               - { label: "Horario Lunes a Jueves", name: "horario_lv", widget: "string" }
               - { label: "Horario Viernes / Verano", name: "horario_sab", widget: "string" }
+              - { label: "Email de contacto (se muestra en la web)", name: "email", widget: "string", required: false }
+
+          # ==========================================
+          # 5. ENVÍOS
+          # ==========================================
+          - label: "🚚 Envíos"
+            name: "envio"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Coste del envío (€, ej: 3,99)", name: "coste", widget: "string" }
+              - { label: "Envío gratis a partir de (€)", name: "gratis_desde", widget: "number", value_type: "int" }
+              - { label: "Zona de envío", name: "zona", widget: "string", default: "España peninsular" }
+              - { label: "Plazo de entrega habitual", name: "plazo", widget: "string" }
+
+          # ==========================================
+          # 6. SOBRE MORELA
+          # ==========================================
+          - label: "🌿 Sobre Morela (quiénes somos)"
+            name: "sobre"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Mostrar la sección", name: "activa", widget: "boolean", default: true }
+              - label: "Texto"
+                name: "texto"
+                widget: "text"
+                hint: "Cuenta quién está detrás del taller, desde cuándo y cómo trabajáis. Deja una línea en blanco para separar párrafos."
+              - { label: "Fotografía (idealmente del taller o de la artesana)", name: "imagen", widget: "image" }
+
+          # ==========================================
+          # 7. DATOS LEGALES (OBLIGATORIOS POR LEY)
+          # ==========================================
+          - label: "⚖️ Datos legales del titular (obligatorio)"
+            name: "legal"
+            widget: "object"
+            collapsed: true
+            hint: "Aparecen en el Aviso Legal, la Política de Privacidad, las Condiciones de venta y el pie de la web. Lo exige la LSSI (art. 10) y el RGPD."
+            fields:
+              - { label: "Nombre y apellidos del titular o razón social", name: "titular", widget: "string" }
+              - { label: "NIF / CIF", name: "nif", widget: "string" }
+              - { label: "Email para clientes y para ejercer derechos de privacidad", name: "email", widget: "string" }
+              - label: "Datos del Registro Mercantil (solo si es una sociedad)"
+                name: "registro"
+                widget: "string"
+                required: false
+                hint: "Ej: Registro Mercantil de Albacete, Tomo X, Folio Y, Hoja AB-1234. Déjalo vacío si eres autónoma."
+              - label: "Fecha de última actualización de los textos legales"
+                name: "actualizado"
+                widget: "datetime"
+                format: "YYYY-MM-DD"
+                date_format: "DD/MM/YYYY"
+                time_format: false
