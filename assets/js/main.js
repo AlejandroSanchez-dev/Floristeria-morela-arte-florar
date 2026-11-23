@@ -30,6 +30,7 @@ function isCampanaVisible(campana) {
 // Copia de seguridad de data.json (se usa solo si data.json no se puede cargar).
 // Si cambias data.json desde el panel, no hace falta tocar esto.
 let SITE_DATA = {
+  demo: true,
   "campana": {
     "activa": false,
     "tema": "san_valentin",
@@ -184,7 +185,7 @@ let SITE_DATA = {
       "imagen_orientativa": false
     },
     {
-      "titulo": "Cúpula de Cristal 'La Bella y la Bestia'",
+      "titulo": "Cúpula de Cristal 'Rosa Encantada'",
       "categoria": "cupulas",
       "etiqueta": "Cúpulas & Regalos",
       "badgeColor": "bg-atelier-gold text-white",
@@ -242,16 +243,6 @@ let SITE_DATA = {
       "descripcion": "Porta-alianzas de madera grabado con una corona floral que repite las flores del ramo: eucalipto, naranja y rojo.",
       "imagen": "/img/uploads/morela-ramo-portaalianzas.webp",
       "imagen_orientativa": false
-    },
-    {
-      "titulo": "Prendidos de Solapa Coordinados",
-      "categoria": "detalles",
-      "etiqueta": "Novio & Padrino",
-      "badgeColor": "bg-atelier-eucalyptus text-white",
-      "precio": "12 € / ud.",
-      "descripcion": "Boutonnieres artesanales para el novio, padrino y testigos elaborados con las mismas flores preservadas del ramo nupcial.",
-      "imagen": "/img/uploads/orientativa-prendidos.webp",
-      "imagen_orientativa": true
     },
     {
       "titulo": "Pulseras de Damas & Decoración de Coche",
@@ -487,6 +478,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
     if (response && response.ok) {
       const remoteData = await response.json();
+      if ('demo' in remoteData) SITE_DATA.demo = remoteData.demo !== false;
       if (remoteData.contacto) SITE_DATA.contacto = { ...SITE_DATA.contacto, ...remoteData.contacto };
       if (remoteData.campana) SITE_DATA.campana = { ...SITE_DATA.campana, ...remoteData.campana };
       if (remoteData.pack_items && Array.isArray(remoteData.pack_items) && remoteData.pack_items.length) {
@@ -591,8 +583,8 @@ document.addEventListener('DOMContentLoaded', async () => {
   function renderGallery(filter = 'all') {
     const filtered = SITE_DATA.galeria.filter(item => filter === 'all' || item.categoria === filter);
     lookbookGrid.innerHTML = filtered.map((item, idx) => `
-      <article data-idx="${idx}" data-category="${esc(item.categoria)}" tabindex="0" role="button" aria-haspopup="dialog" aria-label="Ver detalles: ${esc(item.titulo)}" class="gallery-card animate-fade-in group cursor-pointer bg-white rounded-2xl sm:rounded-3xl overflow-hidden border border-atelier-blushMid/80 shadow-sm hover:shadow-editorial transition-all duration-500 flex flex-col justify-between">
-        <div class="relative h-40 sm:h-72 overflow-hidden bg-atelier-sand">
+      <article data-idx="${idx}" data-category="${esc(item.categoria)}" tabindex="0" role="button" aria-haspopup="dialog" aria-label="Ver detalles: ${esc(item.titulo)}" class="gallery-card animate-fade-in group cursor-pointer w-[70%] sm:w-[44%] md:w-[36%] lg:w-auto shrink-0 snap-start bg-white rounded-2xl sm:rounded-3xl overflow-hidden border border-atelier-blushMid/80 shadow-sm hover:shadow-editorial transition-all duration-500 flex flex-col justify-between">
+        <div class="relative h-56 sm:h-72 overflow-hidden bg-atelier-sand">
           <img 
             src="${esc(item.imagen)}" 
             alt="${esc(item.titulo)}${item.imagen_orientativa ? ' (imagen orientativa)' : ''}" 
@@ -610,7 +602,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         </div>
         <div class="p-3 sm:p-6 flex-1 flex flex-col justify-between space-y-2 sm:space-y-4">
           <div>
-            <h3 class="font-serif text-sm sm:text-2xl font-bold text-ink group-hover:text-atelier-berry transition-colors leading-snug line-clamp-2">
+            <h3 class="font-serif text-base sm:text-2xl font-bold text-ink group-hover:text-atelier-berry transition-colors leading-snug line-clamp-2">
               ${esc(item.titulo)}
             </h3>
             <p class="hidden sm:block text-xs sm:text-sm text-ink-muted mt-1.5 line-clamp-2 leading-relaxed">
@@ -655,6 +647,25 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   renderGallery('all');
 
+  // Indicador del carrusel en móvil/tablet
+  const lbProgress = document.getElementById('lookbook-progress');
+  const lbCounter = document.getElementById('lookbook-counter');
+  function updateLookbookIndicator() {
+    if (!lbProgress) return;
+    const max = lookbookGrid.scrollWidth - lookbookGrid.clientWidth;
+    const cards = lookbookGrid.children.length;
+    const visible = Math.max(1, Math.round(lookbookGrid.clientWidth / (lookbookGrid.firstElementChild?.offsetWidth || 1)));
+    const widthPct = Math.min(100, (visible / Math.max(cards, 1)) * 100);
+    lbProgress.style.width = widthPct + '%';
+    const ratio = max > 0 ? lookbookGrid.scrollLeft / max : 0;
+    lbProgress.style.marginLeft = (ratio * (100 - widthPct)) + '%';
+    const first = Math.min(cards, Math.round(ratio * Math.max(cards - visible, 0)) + 1);
+    lbCounter.textContent = max > 0 ? `${first} / ${cards} · desliza →` : `${cards} piezas`;
+  }
+  lookbookGrid.addEventListener('scroll', updateLookbookIndicator, { passive: true });
+  window.addEventListener('resize', updateLookbookIndicator);
+  updateLookbookIndicator();
+
   // Filtros de la galería
   const filterBtns = document.querySelectorAll('.gallery-filter-btn');
   filterBtns.forEach(btn => {
@@ -667,6 +678,8 @@ document.addEventListener('DOMContentLoaded', async () => {
       btn.setAttribute('aria-pressed', 'true');
       btn.className = 'gallery-filter-btn bg-atelier-berry text-white text-xs sm:text-sm font-semibold px-4 sm:px-5 py-2.5 rounded-full transition-all shrink-0 shadow-sm';
       renderGallery(filter);
+      lookbookGrid.scrollTo({ left: 0 });
+      updateLookbookIndicator();
     });
   });
 
@@ -714,22 +727,22 @@ document.addEventListener('DOMContentLoaded', async () => {
         : `bg-white text-ink-muted border border-atelier-sand`;
 
       return `
-        <div class="${cardClasses} rounded-2xl p-3 sm:p-4 transition-all duration-200 flex flex-col justify-between gap-2.5 sm:gap-3">
-          <div class="flex items-center sm:items-start gap-2.5 sm:gap-3">
-            <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-xl ${iconClasses} flex items-center justify-center shrink-0 transition-colors">
+        <div class="${cardClasses} rounded-2xl p-2.5 sm:p-4 transition-all duration-200 flex flex-col justify-between gap-2 sm:gap-3">
+          <div class="flex items-start gap-2 sm:gap-3">
+            <div class="w-8 h-8 sm:w-11 sm:h-11 rounded-lg sm:rounded-xl ${iconClasses} flex items-center justify-center shrink-0 transition-colors [&>svg]:w-4 [&>svg]:h-4 sm:[&>svg]:w-auto sm:[&>svg]:h-auto">
               ${BOTANICAL_SVGS[item.svg] || BOTANICAL_SVGS.bouquet}
             </div>
             <div class="flex-1 min-w-0">
-              <h4 class="font-bold text-xs sm:text-sm text-ink truncate">${esc(item.nombre)}</h4>
+              <h4 class="font-bold text-[11px] sm:text-sm text-ink leading-tight line-clamp-2 sm:truncate">${esc(item.nombre)}</h4>
               <p class="hidden sm:block text-[11px] text-ink-muted leading-snug mt-0.5">${esc(item.descripcion)}</p>
-              <span class="inline-block mt-0.5 sm:mt-1.5 text-xs font-bold text-atelier-berry">${esc(item.precio)} € / ud.</span>
+              <span class="inline-block mt-0.5 sm:mt-1.5 text-[11px] sm:text-xs font-bold text-atelier-berry">${esc(item.precio)} €<span class="hidden sm:inline"> / ud.</span></span>
             </div>
-            <!-- Contador +/- ergonómico en móvil en la misma fila -->
-            <div class="flex sm:hidden items-center gap-1.5 bg-white rounded-full px-1.5 py-1 border border-atelier-sand shadow-sm shrink-0">
-              <button type="button" data-action="dec" data-id="${item.id}" aria-label="Restar unidad" class="w-6 h-6 rounded-full hover:bg-atelier-blush text-ink font-bold text-sm flex items-center justify-center transition">−</button>
-              <span class="w-4 text-center text-xs font-bold text-ink">${qty}</span>
-              <button type="button" data-action="inc" data-id="${item.id}" aria-label="Sumar unidad" class="w-6 h-6 rounded-full bg-ink hover:bg-atelier-berry text-white font-bold text-sm flex items-center justify-center transition">+</button>
-            </div>
+          </div>
+          <!-- Contador +/- en móvil, a lo ancho del mosaico -->
+          <div class="flex sm:hidden items-center justify-between bg-white rounded-full px-1 py-0.5 border border-atelier-sand shadow-sm">
+            <button type="button" data-action="dec" data-id="${item.id}" aria-label="Restar unidad" class="w-7 h-7 rounded-full hover:bg-atelier-blush text-ink font-bold text-sm flex items-center justify-center transition">−</button>
+            <span class="text-xs font-bold text-ink">${qty}</span>
+            <button type="button" data-action="inc" data-id="${item.id}" aria-label="Sumar unidad" class="w-7 h-7 rounded-full bg-ink hover:bg-atelier-berry text-white font-bold text-sm flex items-center justify-center transition">+</button>
           </div>
 
           <!-- En escritorio/tablet mostramos la barra inferior completa con subtotal -->
@@ -789,6 +802,8 @@ document.addEventListener('DOMContentLoaded', async () => {
       : `<li class="text-xs text-ink-muted italic bg-white/60 p-4 rounded-xl text-center">Usa los botones (+) para añadir piezas a tu propuesta floral.</li>`;
 
     estimatedTotalEl.textContent = `${total} €`;
+    const stickyTotal = document.getElementById('pack-sticky-total');
+    if (stickyTotal) stickyTotal.textContent = `${total} €`;
 
     // Barra de envío gratis (umbral 89 €)
     const freeShippingThreshold = Number(SITE_DATA.envio?.gratis_desde) || 89;
@@ -832,6 +847,49 @@ document.addEventListener('DOMContentLoaded', async () => {
       waFloat.classList.toggle('pointer-events-none', ocultar);
     }, { threshold: 0.05 });
     zonas.forEach(z => obs.observe(z));
+  }
+
+  // Barra fija del presupuesto en móvil: visible mientras se ven las piezas, oculta al llegar al resumen
+  const packSticky = document.getElementById('pack-sticky');
+  const packItemsZone = document.getElementById('pack-items-container')?.parentElement?.parentElement;
+  const packSummary = document.getElementById('pack-summary');
+  const demoBadge = document.getElementById('demo-badge');
+  if (packSticky && packItemsZone && packSummary && 'IntersectionObserver' in window) {
+    let inItems = false, inSummary = false;
+    const refresh = () => {
+      const show = inItems && !inSummary && window.innerWidth < 1024;
+      packSticky.classList.toggle('translate-y-full', !show);
+      packSticky.classList.toggle('opacity-0', !show);
+      packSticky.classList.toggle('pointer-events-none', !show);
+      if (demoBadge) demoBadge.classList.toggle('opacity-0', show);
+    };
+    new IntersectionObserver(([e]) => { inItems = e.isIntersecting; refresh(); }, { threshold: 0 }).observe(packItemsZone);
+    new IntersectionObserver(([e]) => { inSummary = e.isIntersecting; refresh(); }, { threshold: 0.15 }).observe(packSummary);
+  }
+
+  // Modo demostración: aviso visible y el formulario se envía por WhatsApp
+  // (así ninguna consulta se queda en una cuenta de Netlify que no es del negocio).
+  const isDemo = SITE_DATA.demo !== false;
+  if (demoBadge) demoBadge.classList.toggle('hidden', !isDemo);
+  document.querySelectorAll('.demo-only').forEach(el => el.classList.toggle('hidden', !isDemo));
+  const contactForm = document.getElementById('contact-form');
+  if (contactForm && isDemo) {
+    const submitBtn = contactForm.querySelector('button[type="submit"]');
+    if (submitBtn) submitBtn.textContent = 'Enviar consulta por WhatsApp';
+    contactForm.addEventListener('submit', e => {
+      e.preventDefault();
+      const f = new FormData(contactForm);
+      const val = k => String(f.get(k) || '').trim();
+      const lines = [
+        `Hola Morela Arte Floral, soy ${val('nombre')}.`,
+        val('tipo') ? `Me interesa: ${val('tipo')}` : '',
+        val('fecha_evento') ? `Fecha del evento: ${val('fecha_evento')}` : '',
+        '', val('mensaje'), '',
+        `Email: ${val('email')}`,
+        val('telefono') ? `Teléfono: ${val('telefono')}` : ''
+      ].filter((l, i, a) => l !== '' || (a[i - 1] !== '' && i > 0));
+      window.open(`https://wa.me/${SITE_DATA.contacto.whatsapp}?text=` + encodeURIComponent(lines.join('\n')), '_blank');
+    });
   }
 
   // Selección de paleta de colores
