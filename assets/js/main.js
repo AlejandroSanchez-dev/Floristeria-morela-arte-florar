@@ -891,3 +891,10 @@ document.addEventListener('DOMContentLoaded', async () => {
   // Año actual automático
   document.getElementById('current-year').textContent = new Date().getFullYear();
 });
+
+// Enlaces directos tipo /#opiniones: el catálogo se pinta con JS después del salto
+// inicial del navegador y desplaza la página, así que repetimos el salto al terminar.
+window.addEventListener('load', () => {
+  const target = location.hash && document.getElementById(decodeURIComponent(location.hash.slice(1)));
+  if (target) setTimeout(() => target.scrollIntoView({ block: 'start' }), 50);
+});
