@@ -164,6 +164,26 @@ let SITE_DATA = {
       "imagen_orientativa": false
     },
     {
+      "titulo": "Ramo Burdeos con Rosas Blancas y Eucalipto",
+      "categoria": "novias",
+      "etiqueta": "Trabajo Real Morela",
+      "badgeColor": "bg-atelier-berry text-white",
+      "precio": "Desde 95 €",
+      "descripcion": "Hortensia preservada en burdeos, rosas blancas, eucalipto, paniculata y bayas rojas, con tallos vistos y lazo de terciopelo. Elegante y con mucho color.",
+      "imagen": "/img/uploads/morela-ramo-burdeos.webp",
+      "imagen_orientativa": false
+    },
+    {
+      "titulo": "Ramo Silvestre para Novia y Damas",
+      "categoria": "novias",
+      "etiqueta": "Trabajo Real Morela",
+      "badgeColor": "bg-atelier-eucalyptus text-white",
+      "precio": "Desde 95 €",
+      "descripcion": "Ramos silvestres de flor preservada y seca en tonos coral, crema y verde, con espigas y paniculata. Hacemos versiones a juego para damas de honor.",
+      "imagen": "/img/uploads/morela-ramo-novia-damas.webp",
+      "imagen_orientativa": false
+    },
+    {
       "titulo": "Cúpula de Cristal 'La Bella y la Bestia'",
       "categoria": "cupulas",
       "etiqueta": "Cúpulas & Regalos",
@@ -174,24 +194,34 @@ let SITE_DATA = {
       "imagen_orientativa": false
     },
     {
-      "titulo": "Pareja de Réplicas en Miniatura para Madres",
+      "titulo": "Réplica de tu Ramo en Cúpula de Cristal",
       "categoria": "cupulas",
-      "etiqueta": "Detalle Emotivo",
-      "badgeColor": "bg-atelier-rose text-white",
-      "precio": "Desde 55 € / ud.",
-      "descripcion": "Reproducimos tu ramo de novia en tamaño compacto con las mismas flores y cinta para que sorprendas a las madres o a tu mejor amiga en el banquete.",
-      "imagen": "/img/uploads/orientativa-arreglo-caja.webp",
-      "imagen_orientativa": true
+      "etiqueta": "Trabajo Real Morela",
+      "badgeColor": "bg-atelier-gold text-white",
+      "precio": "Desde 55 €",
+      "descripcion": "Reproducimos las flores de tu ramo en una cúpula de cristal con base de madera: un recuerdo que dura años o un regalo para las madres.",
+      "imagen": "/img/uploads/morela-replica-cupula.webp",
+      "imagen_orientativa": false
     },
     {
-      "titulo": "Peineta y Horquillas Florales de Novia",
+      "titulo": "Peineta Floral en Burdeos y Dorado",
       "categoria": "tocados",
-      "etiqueta": "Tocados a Medida",
+      "etiqueta": "Trabajo Real Morela",
       "badgeColor": "bg-atelier-plum text-white",
       "precio": "Desde 38 €",
-      "descripcion": "Tocado alambrado a mano flor a flor en nuestro taller, diseñado exactamente con los mismos tonos de tu ramo y adaptado a tu recogido o trenza.",
-      "imagen": "/img/uploads/orientativa-tocado.webp",
-      "imagen_orientativa": true
+      "descripcion": "Tocado alambrado a mano con hortensia burdeos, paniculata y ramitas doradas, pensado para semirecogidos y a juego con el ramo.",
+      "imagen": "/img/uploads/morela-tocado-burdeos.webp",
+      "imagen_orientativa": false
+    },
+    {
+      "titulo": "Horquillas Florales para Trenza",
+      "categoria": "tocados",
+      "etiqueta": "Trabajo Real Morela",
+      "badgeColor": "bg-atelier-plum text-white",
+      "precio": "Desde 25 €",
+      "descripcion": "Pequeñas horquillas con flor seca en tonos crema, paniculata y lagurus para repartir por trenzas y recogidos.",
+      "imagen": "/img/uploads/morela-horquillas-trenza.webp",
+      "imagen_orientativa": false
     },
     {
       "titulo": "Corona y Diadema de Primera Comunión",
@@ -202,6 +232,16 @@ let SITE_DATA = {
       "descripcion": "Semicoronas, diademas y apliques para cinturón de Comunión o niñas de arras en tonos empolvados, beige, lavanda o blanco roto.",
       "imagen": "/img/uploads/orientativa-comunion.webp",
       "imagen_orientativa": true
+    },
+    {
+      "titulo": "Ramo y Porta-alianzas a Juego",
+      "categoria": "detalles",
+      "etiqueta": "Trabajo Real Morela",
+      "badgeColor": "bg-atelier-eucalyptus text-white",
+      "precio": "Desde 20 €",
+      "descripcion": "Porta-alianzas de madera grabado con una corona floral que repite las flores del ramo: eucalipto, naranja y rojo.",
+      "imagen": "/img/uploads/morela-ramo-portaalianzas.webp",
+      "imagen_orientativa": false
     },
     {
       "titulo": "Prendidos de Solapa Coordinados",
