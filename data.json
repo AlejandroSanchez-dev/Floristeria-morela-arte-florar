@@ -1,4 +1,5 @@
 {
+  "demo": true,
   "campana": {
     "activa": false,
     "tema": "san_valentin",
@@ -153,7 +154,7 @@
       "imagen_orientativa": false
     },
     {
-      "titulo": "Cúpula de Cristal 'La Bella y la Bestia'",
+      "titulo": "Cúpula de Cristal 'Rosa Encantada'",
       "categoria": "cupulas",
       "etiqueta": "Cúpulas & Regalos",
       "badgeColor": "bg-atelier-gold text-white",
@@ -211,16 +212,6 @@
       "descripcion": "Porta-alianzas de madera grabado con una corona floral que repite las flores del ramo: eucalipto, naranja y rojo.",
       "imagen": "/img/uploads/morela-ramo-portaalianzas.webp",
       "imagen_orientativa": false
-    },
-    {
-      "titulo": "Prendidos de Solapa Coordinados",
-      "categoria": "detalles",
-      "etiqueta": "Novio & Padrino",
-      "badgeColor": "bg-atelier-eucalyptus text-white",
-      "precio": "12 € / ud.",
-      "descripcion": "Boutonnieres artesanales para el novio, padrino y testigos elaborados con las mismas flores preservadas del ramo nupcial.",
-      "imagen": "/img/uploads/orientativa-prendidos.webp",
-      "imagen_orientativa": true
     },
     {
       "titulo": "Pulseras de Damas & Decoración de Coche",

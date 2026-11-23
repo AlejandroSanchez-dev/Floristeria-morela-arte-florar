@@ -42,9 +42,11 @@
     X-Robots-Tag = "noindex, nofollow"
 
 # Cabeceras de seguridad
+# DEMO: X-Robots-Tag evita que Google indexe la propuesta. Quitar al publicar con el dominio propio.
 [[headers]]
   for = "/*"
   [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
     X-Frame-Options = "SAMEORIGIN"
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"

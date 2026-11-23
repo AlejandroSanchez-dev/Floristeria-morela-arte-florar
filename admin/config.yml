@@ -99,6 +99,7 @@ collections:
           # ==========================================
           # 2. PRECIOS Y TEXTOS DE LA CALCULADORA NUPCIAL
           # ==========================================
+          - { label: "Modo demostración (aviso «demo» y formulario por WhatsApp)", name: "demo", widget: "boolean", default: true, hint: "Desactívalo cuando la web sea oficial y el formulario de Netlify esté configurado." }
           - { label: "Aviso de precios (déjalo vacío para quitarlo)", name: "aviso_precios", widget: "string", required: false }
           - label: "🧮 Precios y Textos de la Calculadora Nupcial"
             name: "pack_items"
