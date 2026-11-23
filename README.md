@@ -30,6 +30,7 @@ Si añades clases de Tailwind nuevas en HTML, JS o `data.json`, vuelve a ejecuta
 
 - Panel → **Datos legales del titular**: nombre/razón social, NIF y email (obligatorio por la LSSI y el RGPD). Mientras estén vacíos, las páginas legales muestran «pendiente de completar».
 - Panel → **Contacto**: email visible.
-- Sustituir las fotos marcadas como «Imagen orientativa» por fotos propias.
-- Cuando se compre el dominio, cambiar `https://floristeriaalex.netlify.app` en `index.html`, las páginas legales, `robots.txt` y `sitemap.xml`.
+- Sustituir las fotos marcadas como «Imagen orientativa» por fotos propias (y una foto de portada de al menos 1920 px de ancho).
+- Poner los precios reales (Panel → calculadora y galería) y vaciar el campo **Aviso de precios**.
+- Cuando se compre el dominio, cambiar `https://morela-arte-floral.netlify.app` en `index.html`, las páginas legales, `robots.txt` y `sitemap.xml`.
 - Netlify → *Forms*: activar la detección de formularios y las notificaciones por email del formulario «contacto».

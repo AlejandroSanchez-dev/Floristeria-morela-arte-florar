@@ -11,7 +11,7 @@
         "nombre": "Cúpula 'Amor Eterno' con Rosa Preservada",
         "descripcion": "Cúpula de cristal con base de madera natural, rosa eterna roja o rosa empolvado y cama de hortensias y paniculata.",
         "precio": "49 €",
-        "precio_antes": "58 €",
+        "precio_antes": "",
         "tag": "El más vendido",
         "imagen": "/img/uploads/cris_1_232554-172552754059480.webp",
         "imagen_orientativa": false
@@ -20,7 +20,7 @@
         "nombre": "Ramo 'Suspiro' de Rosas y Eucalipto",
         "descripcion": "Ramo artesanal de flores 100% preservadas envuelto en papel kraft de atelier y lazo de terciopelo.",
         "precio": "39 €",
-        "precio_antes": "45 €",
+        "precio_antes": "",
         "tag": "Unidades limitadas",
         "imagen": "/img/uploads/orientativa-ramo-rosas.webp",
         "imagen_orientativa": true
@@ -38,6 +38,7 @@
     "fecha_inicio": "2027-01-15",
     "fecha_fin": "2027-02-14"
   },
+  "aviso_precios": "Precios de ejemplo: se sustituirán por los precios reales del taller.",
   "pack_items": [
     {
       "id": "ramo",

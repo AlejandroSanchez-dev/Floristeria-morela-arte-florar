@@ -1,4 +1,4 @@
-// Iconos SVG botánicos a medida (Cero emojis)
+// Iconos SVG de las piezas del configurador
 const BOTANICAL_SVGS = {
   bouquet: `<svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3c2.5 0 4.5 2 4.5 4.5 0 1.8-1 3.3-2.5 4l-2 9.5-2-9.5C8.5 10.8 7.5 9.3 7.5 7.5 7.5 5 9.5 3 12 3z"/><path stroke-linecap="round" stroke-linejoin="round" d="M8 14h8M9 17.5l6-1"/></svg>`,
   boutonniere: `<svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21V9m0 0C12 5.5 15 3 18 3c0 3.5-2.5 6-6 6zm0 3c0-3.5-3-6-6-6 0 3.5 2.5 6 6 6z"/></svg>`,
@@ -42,7 +42,7 @@ let SITE_DATA = {
         "nombre": "Cúpula 'Amor Eterno' con Rosa Preservada",
         "descripcion": "Cúpula de cristal con base de madera natural, rosa eterna roja o rosa empolvado y cama de hortensias y paniculata.",
         "precio": "49 €",
-        "precio_antes": "58 €",
+        "precio_antes": "",
         "tag": "El más vendido",
         "imagen": "/img/uploads/cris_1_232554-172552754059480.webp",
         "imagen_orientativa": false
@@ -51,7 +51,7 @@ let SITE_DATA = {
         "nombre": "Ramo 'Suspiro' de Rosas y Eucalipto",
         "descripcion": "Ramo artesanal de flores 100% preservadas envuelto en papel kraft de atelier y lazo de terciopelo.",
         "precio": "39 €",
-        "precio_antes": "45 €",
+        "precio_antes": "",
         "tag": "Unidades limitadas",
         "imagen": "/img/uploads/orientativa-ramo-rosas.webp",
         "imagen_orientativa": true
@@ -69,6 +69,7 @@ let SITE_DATA = {
     "fecha_inicio": "2027-01-15",
     "fecha_fin": "2027-02-14"
   },
+  "aviso_precios": "Precios de ejemplo: se sustituirán por los precios reales del taller.",
   "pack_items": [
     {
       "id": "ramo",
@@ -503,6 +504,12 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
   }
 
+  // Aviso de "precios de ejemplo" (se quita vaciando el campo en el panel)
+  document.querySelectorAll('.aviso-precios').forEach(el => {
+    el.textContent = SITE_DATA.aviso_precios || '';
+    el.classList.toggle('hidden', !SITE_DATA.aviso_precios);
+  });
+
   // Gastos de envío en los textos de la página
   if (SITE_DATA.envio) {
     document.querySelectorAll('[data-envio-coste]').forEach(el => { el.textContent = SITE_DATA.envio.coste; });
@@ -553,13 +560,13 @@ document.addEventListener('DOMContentLoaded', async () => {
             onerror="this.onerror=null;this.src=FALLBACK_IMG;"
             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
           />
-          <span class="absolute top-2.5 left-2.5 sm:top-3.5 sm:left-3.5 ${esc(item.badgeColor)} text-[11px] sm:text-[11px] font-bold uppercase tracking-wider px-2 py-0.5 sm:px-3 sm:py-1 rounded-full shadow-sm">
+          <span class="absolute top-2.5 left-2.5 sm:top-3.5 sm:left-3.5 max-w-[calc(100%-1.25rem)] sm:max-w-[60%] truncate ${esc(item.badgeColor)} text-[10px] sm:text-[11px] font-bold uppercase tracking-wider px-2 py-0.5 sm:px-3 sm:py-1 rounded-full shadow-sm">
             ${esc(item.etiqueta)}
           </span>
-          <span class="absolute top-2.5 right-2.5 sm:top-3.5 sm:right-3.5 bg-white/95 backdrop-blur-md text-ink text-[11px] sm:text-xs font-bold px-2 py-0.5 sm:px-3 sm:py-1 rounded-full shadow-sm">
+          <span class="hidden sm:inline-block absolute top-3.5 right-3.5 bg-white/95 backdrop-blur-md text-ink text-xs font-bold px-3 py-1 rounded-full shadow-sm">
             ${esc(item.precio)}
           </span>
-              ${item.imagen_orientativa ? `<span class="absolute bottom-2 left-2 bg-ink/70 text-white text-[11px] px-2 py-0.5 rounded-full">Imagen orientativa</span>` : ''}
+          ${item.imagen_orientativa ? `<span class="absolute bottom-2 left-2 bg-ink/70 text-white text-[11px] px-2 py-0.5 rounded-full">Imagen orientativa</span>` : ''}
         </div>
         <div class="p-3 sm:p-6 flex-1 flex flex-col justify-between space-y-2 sm:space-y-4">
           <div>
@@ -571,7 +578,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             </p>
           </div>
           <div class="pt-2 border-t border-atelier-sand flex items-center justify-between text-[11px] sm:text-xs font-bold text-atelier-berry">
-            <span class="truncate">Ver detalles</span>
+            <span class="truncate"><span class="sm:hidden text-ink">${esc(item.precio)}</span><span class="hidden sm:inline">Ver detalles</span></span>
             <span class="w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-atelier-blush group-hover:bg-atelier-berry group-hover:text-white flex items-center justify-center transition-colors shrink-0 text-xs">＋</span>
           </div>
         </div>
@@ -771,6 +778,21 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   renderPackConfigurator();
   updatePackSummary();
+
+  // En móvil el botón flotante de WhatsApp tapaba los botones (+) del configurador
+  // y el formulario, que ya tienen su propio botón de contacto: lo ocultamos ahí.
+  const waFloat = document.getElementById('wa-float');
+  if (waFloat && 'IntersectionObserver' in window) {
+    const visibles = new Set();
+    const zonas = ['atelier-pack', 'contacto'].map(id => document.getElementById(id)).filter(Boolean);
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e => e.isIntersecting ? visibles.add(e.target) : visibles.delete(e.target));
+      const ocultar = visibles.size > 0 && window.innerWidth < 1024;
+      waFloat.classList.toggle('opacity-0', ocultar);
+      waFloat.classList.toggle('pointer-events-none', ocultar);
+    }, { threshold: 0.05 });
+    zonas.forEach(z => obs.observe(z));
+  }
 
   // Selección de paleta de colores
   const paletteBtns = document.querySelectorAll('.palette-btn');

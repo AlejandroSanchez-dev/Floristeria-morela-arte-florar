@@ -99,6 +99,7 @@ collections:
           # ==========================================
           # 2. PRECIOS Y TEXTOS DE LA CALCULADORA NUPCIAL
           # ==========================================
+          - { label: "Aviso de precios (déjalo vacío para quitarlo)", name: "aviso_precios", widget: "string", required: false }
           - label: "🧮 Precios y Textos de la Calculadora Nupcial"
             name: "pack_items"
             widget: "list"

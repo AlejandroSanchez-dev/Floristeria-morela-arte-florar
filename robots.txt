@@ -3,4 +3,4 @@ Allow: /
 Disallow: /admin/
 Disallow: /gracias.html
 
-Sitemap: https://floristeriaalex.netlify.app/sitemap.xml
+Sitemap: https://morela-arte-floral.netlify.app/sitemap.xml
