@@ -157,8 +157,8 @@ collections:
               - { label: "Teléfono visible", name: "telefono", widget: "string" }
               - { label: "WhatsApp (34 delante, sin + ni espacios)", name: "whatsapp", widget: "string" }
               - { label: "Dirección del Taller", name: "direccion", widget: "string" }
-              - { label: "Horario Lunes a Jueves", name: "horario_lv", widget: "string" }
-              - { label: "Horario Viernes / Verano", name: "horario_sab", widget: "string" }
+              - { label: "Horario principal (línea 1)", name: "horario_lv", widget: "string" }
+              - { label: "Horario secundario (línea 2: fines de semana, verano…)", name: "horario_sab", widget: "string" }
               - { label: "Email de contacto (se muestra en la web)", name: "email", widget: "string", required: false }
 
           # ==========================================
